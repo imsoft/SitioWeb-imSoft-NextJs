@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const nosotros = () => {
@@ -6,10 +7,12 @@ const nosotros = () => {
       <div className="relative bg-white">
         <div className="lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
-            <img
+            <Image
               className="h-56 w-full object-cover lg:absolute lg:h-full"
               src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Nosotros%20imSoft.jpg?alt=media&token=ac7d54a0-7048-4856-9230-b3a8ded8b04f"
               alt=""
+              height={100}
+              width={100}
             />
           </div>
         </div>
@@ -35,8 +38,8 @@ const nosotros = () => {
                 crear soluciones de software personalizadas que se adaptaran a
                 ellas. Así que, con un poco de valentía y mucho trabajo duro,
                 decidimos lanzar nuestra propia empresa de desarrollo de
-                software llamada "
-                <span className="text-primary-500">imSoft</span>".
+                software llamada &quot;
+                <span className="text-primary-500">imSoft</span>&quot;.
               </p>
               <p className="mt-8 text-lg text-gray-500">
                 A pesar de que el camino no ha sido fácil, nos hemos mantenido

@@ -45,7 +45,7 @@ const Post = ({ source, frontMatter, posts }: Props) => {
     }
     const result = Array.from(randomIndexes).map((i) => posts[i]);
     setRandomObjectsResult(result);
-  }, []);
+  }, [posts]);
 
   return (
     <>

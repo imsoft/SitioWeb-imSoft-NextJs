@@ -1,11 +1,11 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, FC, useState } from "react";
 import {
   EnvelopeIcon,
   ExclamationCircleIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { ISocial } from "../../interfaces";
 import { sendEmail } from "../../lib";
 
@@ -136,7 +136,7 @@ const socialMedia: ISocial[] = [
   },
 ];
 
-const contacto = () => {
+const Contacto = () => {
   const router = useRouter();
 
   const [inputName, setInputName] = useState("");
@@ -412,4 +412,4 @@ const contacto = () => {
   );
 };
 
-export default contacto;
+export default Contacto;

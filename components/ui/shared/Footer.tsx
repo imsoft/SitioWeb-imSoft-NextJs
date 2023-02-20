@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IFooter } from "../../../interfaces";
@@ -160,10 +161,12 @@ export const Footer = () => {
         <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8 xl:col-span-1">
-              <img
+              <Image
                 className="h-10"
                 src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul.png?alt=media&token=0a5bf3d6-641b-4d5f-8f17-45e5dab67995"
                 alt="imSoft"
+                height={100}
+                width={100}
               />
               <p className="text-base text-gray-500">
                 Soluciones de software a medida para empresas innovadoras.

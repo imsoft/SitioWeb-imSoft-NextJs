@@ -25,7 +25,7 @@ export const PricesSection = ({
 
       {listOfPackages.map((packageFeatures) => (
         // <div className="mt-8 bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
-        <div className="mt-8 bg-white sm:mt-12">
+        <div key={packageFeatures.title} className="mt-8 bg-white sm:mt-12">
           <div className="relative">
             <div className="absolute inset-0 h-1/2" />
             <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

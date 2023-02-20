@@ -1,10 +1,15 @@
-import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 
-interface Props {
-  slug: string;
+interface FS {
+  readdirSync(path: string): string[];
+  readFileSync(path: string, encoding: string): string;
+}
+
+let fs: FS;
+if (typeof window === "undefined") {
+  fs = require("fs");
 }
 
 interface FrontMatter {

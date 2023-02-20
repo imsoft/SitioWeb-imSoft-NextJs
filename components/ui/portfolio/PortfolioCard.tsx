@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { IPortfolioCard } from "../../../interfaces";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
@@ -15,10 +16,12 @@ export const PortfolioCard = ({
       <li key={name}>
         <div className="space-y-4">
           <div className="aspect-w-3 aspect-h-2">
-            <img
+            <Image
               className="rounded-lg object-cover shadow-lg"
               src={imageUrl}
               alt={alt}
+              width={100}
+              height={100}
             />
           </div>
           <div className="space-y-2">

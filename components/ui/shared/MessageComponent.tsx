@@ -1,5 +1,5 @@
 import React from 'react'
-import { INotification, Services } from '../../../interfaces'
+import { INotificationMessage, Services } from '../../../interfaces'
 import {
     ChevronRightIcon,
     ClipboardDocumentCheckIcon,
@@ -8,6 +8,8 @@ import {
     ShoppingBagIcon,
     ArrowTrendingUpIcon,
   } from "@heroicons/react/24/outline";
+import Link from 'next/link';
+import Image from "next/image";
 
 const links: Services[] = [
     {
@@ -51,16 +53,17 @@ const MessageComponent = ({
     topic,
     message,
     comment,
-}: INotification) => {
+}: INotificationMessage) => {
   return (
     <>
     <div className="bg-white">
         <main className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <div className="flex-shrink-0 pt-16">
-            <img
+            <Image
               className="mx-auto h-24 w-auto"
               src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul.png?alt=media&token=0a5bf3d6-641b-4d5f-8f17-45e5dab67995"
               alt="Your Company"
+              height={100} width={100}
             />
           </div>
           <div className="mx-auto max-w-xl py-16 sm:pb-24">
@@ -97,13 +100,13 @@ const MessageComponent = ({
                     <div className="min-w-0 flex-1">
                       <h3 className="text-base font-medium text-gray-900">
                         <span className="rounded-sm focus-within:ring-2 focus-within:ring-primary-500 focus-within:ring-offset-2">
-                          <a href={link.href} className="focus:outline-none">
+                          <Link href={link.href} className="focus:outline-none">
                             <span
                               className="absolute inset-0"
                               aria-hidden="true"
                             />
                             {link.nameOfService}
-                          </a>
+                          </Link>
                         </span>
                       </h3>
                       <p className="text-base text-gray-500">
@@ -120,13 +123,13 @@ const MessageComponent = ({
                 ))}
               </ul>
               <div className="mt-8">
-                <a
+                <Link
                   href="/"
                   className="text-base font-medium text-primary-600 hover:text-primary-500"
                 >
                   Regresar al inicio
                   <span aria-hidden="true"> &rarr;</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

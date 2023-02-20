@@ -19,6 +19,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { IHeader } from "../../../interfaces";
+import Image from "next/image";
 
 const linkWhatsappGeneral = process.env.NEXT_PUBLIC_LINK_WHATSAPP_GENERAL;
 
@@ -61,7 +62,11 @@ const services: IHeader[] = [
 ];
 
 const callsToAction: IHeader[] = [
-  { name: "¿Eres nuevo?", href: "https://www.youtube.com/@weareimsoft", icon: PlayIcon },
+  {
+    name: "¿Eres nuevo?",
+    href: "https://www.youtube.com/@weareimsoft",
+    icon: PlayIcon,
+  },
   {
     name: "Ver todos los servicios",
     href: "/servicios",
@@ -90,7 +95,11 @@ const company: IHeader[] = [
 ];
 
 const articles: IHeader[] = [
-  { name: "Nuestros Artículos", href: "/articulos", icon: DocumentDuplicateIcon },
+  {
+    name: "Nuestros Artículos",
+    href: "/articulos",
+    icon: DocumentDuplicateIcon,
+  },
   // { name: "Lecturas rápidas", href: "#", icon: BoltIcon },
   // { name: "Artículo random", href: "#", icon: ArrowPathIcon },
 ];
@@ -100,8 +109,7 @@ const blogPosts = [
     id: 1,
     name: "Mi primer post",
     href: "articulos/mi-primer-post",
-    preview:
-      "Hola, esto es mi primer post escrito en Markdown",
+    preview: "Hola, esto es mi primer post escrito en Markdown",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Sitio%20Web%20imSoft.jpg?alt=media&token=24876c4a-b461-47d4-be61-67c4cff32881",
   },
@@ -109,8 +117,7 @@ const blogPosts = [
     id: 2,
     name: "Mi segundo post",
     href: "articulos/mi-segundo-post",
-    preview:
-      "Hola, esto es mi segundo post escrito en Markdown",
+    preview: "Hola, esto es mi segundo post escrito en Markdown",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Nosotros%20imSoft.jpg?alt=media&token=ac7d54a0-7048-4856-9230-b3a8ded8b04f",
   },
@@ -135,10 +142,12 @@ export const Header = () => {
           <div>
             <Link href="/" className="flex">
               <span className="sr-only">imSoft</span>
-              <img
+              <Image
                 className="h-8 w-auto sm:h-10"
                 src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul.png?alt=media&token=0a5bf3d6-641b-4d5f-8f17-45e5dab67995"
                 alt=""
+                height={100}
+                width={100}
               />
             </Link>
           </div>
@@ -371,10 +380,12 @@ export const Header = () => {
                                       className="-m-3 flex rounded-lg p-3 hover:bg-gray-100"
                                     >
                                       <div className="hidden flex-shrink-0 sm:block">
-                                        <img
+                                        <Image
                                           className="h-20 w-32 rounded-md object-cover"
                                           src={post.imageUrl}
                                           alt=""
+                                          height={100}
+                                          width={100}
                                         />
                                       </div>
                                       <div className="w-0 flex-1 sm:ml-8">
@@ -435,10 +446,12 @@ export const Header = () => {
             <div className="px-5 pt-5 pb-6 sm:pb-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
+                  <Image
                     className="h-8 w-auto"
                     src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul.png?alt=media&token=0a5bf3d6-641b-4d5f-8f17-45e5dab67995"
                     alt="Your Company"
+                    height={100}
+                    width={100}
                   />
                 </div>
                 <div className="-mr-2">

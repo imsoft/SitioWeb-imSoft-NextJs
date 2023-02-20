@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { ICallToActionSection } from "../../../interfaces";
+import Image from "next/image";
 
 export const CallToActionSection = ({
   image,
@@ -13,7 +14,7 @@ export const CallToActionSection = ({
     <>
       <div className="relative bg-primary-500 mt-20">
         <div className="h-56 bg-primary-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-          <img className="h-full w-full object-cover" src={image} alt="" />
+          <Image className="h-full w-full object-cover" src={image} alt="" height={100} width={100} />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div className="md:ml-auto md:w-1/2 md:pl-10">
