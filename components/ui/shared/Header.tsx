@@ -146,8 +146,8 @@ export const Header = () => {
                 className="h-8 w-auto sm:h-10"
                 src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul.png?alt=media&token=0a5bf3d6-641b-4d5f-8f17-45e5dab67995"
                 alt=""
-                height={100}
-                width={100}
+                height={500}
+                width={500}
               />
             </Link>
           </div>
