@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getAllFilesMetadata, getFileBySlug, getFiles } from "../../lib/mdx";
 import { MDXRemote } from "next-mdx-remote";
@@ -91,7 +89,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
   return {
     paths,
-    fallback: "blocking",
+    fallback: false,
   };
 };
 

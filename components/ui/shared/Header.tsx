@@ -108,7 +108,7 @@ const blogPosts = [
   {
     id: 1,
     name: "Mi primer post",
-    href: "articulos/mi-primer-post",
+    href: "/articulos/mi-primer-post",
     preview: "Hola, esto es mi primer post escrito en Markdown",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Sitio%20Web%20imSoft.jpg?alt=media&token=24876c4a-b461-47d4-be61-67c4cff32881",
@@ -116,7 +116,7 @@ const blogPosts = [
   {
     id: 2,
     name: "Mi segundo post",
-    href: "articulos/mi-segundo-post",
+    href: "/articulos/mi-segundo-post",
     preview: "Hola, esto es mi segundo post escrito en Markdown",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Nosotros%20imSoft.jpg?alt=media&token=ac7d54a0-7048-4856-9230-b3a8ded8b04f",
@@ -263,13 +263,13 @@ export const Header = () => {
                 )}
               </Popover>
               <Link
-                href="nosotros"
+                href="/nosotros"
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 Conócenos
               </Link>
               <Link
-                href="portafolio"
+                href="/portafolio"
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 Portafolio
@@ -378,6 +378,7 @@ export const Header = () => {
                                     <Link
                                       href={post.href}
                                       className="-m-3 flex rounded-lg p-3 hover:bg-gray-100"
+                                      onClick={() => setIsShowingMore(false)}
                                     >
                                       <div className="hidden flex-shrink-0 sm:block">
                                         <Image
@@ -419,7 +420,7 @@ export const Header = () => {
                 )}
               </Popover>
               <Link
-                href="contacto"
+                href="/contacto"
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 Contacto
