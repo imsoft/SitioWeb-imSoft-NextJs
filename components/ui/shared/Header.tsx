@@ -111,7 +111,7 @@ const blogPosts = [
     href: "/articulos/como-el-desarrollo-web-puede-impulsar el-crecimiento-de-tu-negocio",
     preview: "En la era digital en la que vivimos, tener una presencia en línea es esencial para cualquier empresa que desee alcanzar su máximo potencial. Y aunque puede haber muchas formas de aumentar la visibilidad en línea, una de las más efectivas es a través del desarrollo web. En este post, exploraremos cómo el desarrollo web puede impulsar el crecimiento de tu negocio, y los diferentes tipos de sitios web que pueden ayudarte a alcanzar tus objetivos empresariales.",
     imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Nosotros%20imSoft.jpg?alt=media&token=ac7d54a0-7048-4856-9230-b3a8ded8b04f",
+      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Imagenes%20Art%C3%ADculos%2Fcomo%20el%20desarrollo%20web%20puede%20impulsar%20el%20crecimiento%20de%20tu%20negocio-imSoft.jpg?alt=media&token=8adb31e4-6798-4bc4-b84e-ac6a46d63922",
   },
   {
     id: 2,
@@ -119,7 +119,7 @@ const blogPosts = [
     href: "/articulos/los-principales-errores-que-las-empresas-cometen-en-su-estrategia-de-desarrollo-web",
     preview: "El desarrollo web es una parte crítica del éxito empresarial en la era digital. Un sitio web bien diseñado y funcional puede ayudar a las empresas a aumentar su visibilidad en línea, atraer a nuevos clientes y hacer crecer su negocio. Sin embargo, muchas empresas cometen errores en su enfoque de desarrollo web, lo que puede resultar en sitios web poco efectivos y costosos. En este artículo, exploraremos los errores más comunes que las empresas cometen en su estrategia de desarrollo web y cómo pueden evitarse.",
     imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Posicionamiento%20SEO%20imSoft.jpg?alt=media&token=4a19c099-9081-452d-94b4-5cf0e6ef9fc6",
+      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Imagenes%20Art%C3%ADculos%2Flos%20principales%20errores%20que%20las%20empresas%20cometen%20en%20su%20estrategia%20de%20desarrollo%20web-imSoft.jpg?alt=media&token=94871249-4ef3-4c21-b93a-c1a8b43195d1",
   },
 ];
 

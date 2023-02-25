@@ -37,13 +37,13 @@ export const IntroductorySection = ({
               </p>
               <div className="mt-8 flex gap-x-4 sm:justify-center">
                 <Link
-                  href="#"
+                  href="/contacto"
                   className="inline-block rounded-lg bg-primary-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-primary-600 hover:bg-primary-700 hover:ring-primary-700"
                 >
                   Contactanos
                 </Link>
                 <Link
-                  href="#"
+                  href="/articulos"
                   className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                 >
                   Artículos
