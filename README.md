@@ -13,7 +13,7 @@ yarn dev
 If you want to update NextJs you must run this command:
 
 ```bash
-npm install next@latest
+npm i next@latest react@latest react-dom@latest eslint-config-next@latest
 # or
-yarn add next@latest
+yarn add next@latest react@latest react-dom@latest eslint-config-next@latest
 ```
