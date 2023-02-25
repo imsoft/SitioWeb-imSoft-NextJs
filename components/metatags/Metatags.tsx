@@ -6,7 +6,7 @@ const Metatags = () => {
       {/* MetaEtiquetas Básicas */}
       <section>
         {/* Generales */}
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
 
         {/* Título de la página. Longitud aproximada de 65 caracteres */}
         <title>
@@ -17,7 +17,7 @@ const Metatags = () => {
           content="imSoft | Sitios web | Paginas web | Ecommerce | Seo | Guadalajara"
         />
         <meta
-          http-equiv="title"
+          httpEquiv="title"
           content="imSoft | Sitios web | Paginas web | Ecommerce | Seo | Guadalajara"
         />
 
@@ -50,7 +50,7 @@ const Metatags = () => {
 
         {/* Idioma */}
         <meta name="language" content="Spanish" />
-        <meta http-equiv="content-language" content="es-MX, en-US" />
+        <meta httpEquiv="content-language" content="es-MX, en-US" />
         <meta name="google" content="translate" />
         {/* <meta name="language" content="English" /> */}
 
@@ -80,8 +80,8 @@ const Metatags = () => {
 
         {/* Cache */}
         <meta content="no-cache" name="Pragma" />
-        <meta http-equiv="pragma" content="no-cache" />
-        <meta http-equiv="cache-control" content="no-cache" />
+        <meta httpEquiv="pragma" content="no-cache" />
+        <meta httpEquiv="cache-control" content="no-cache" />
 
         {/* Dublincore */}
         <meta name="DC.title" lang="es-MX" content="Título del documento" />

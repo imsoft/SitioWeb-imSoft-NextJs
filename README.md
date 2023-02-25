@@ -17,3 +17,9 @@ npm i next@latest react@latest react-dom@latest eslint-config-next@latest
 # or
 yarn add next@latest react@latest react-dom@latest eslint-config-next@latest
 ```
+
+## Eliminar Archivo .DS_Store
+
+```bash
+rm /Users/brandonurielgarciaramos/Sitios\ Web/imSoft/Nextjs/imsoft/posts/.DS_Store
+```

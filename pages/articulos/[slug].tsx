@@ -33,7 +33,6 @@ interface Posts {
 }
 
 const Post = ({ source, frontMatter, posts }: Props) => {
-
   const [randomObjectsResult, setRandomObjectsResult] = useState<Posts[]>([]);
 
   useEffect(() => {
@@ -56,9 +55,8 @@ const Post = ({ source, frontMatter, posts }: Props) => {
           />
         </div>
       </div>
-      
-      <RecommendationsPosts props={randomObjectsResult} />
 
+      <RecommendationsPosts props={randomObjectsResult} />
     </>
   );
 };

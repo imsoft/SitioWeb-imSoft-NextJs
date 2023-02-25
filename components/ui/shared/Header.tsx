@@ -107,19 +107,19 @@ const articles: IHeader[] = [
 const blogPosts = [
   {
     id: 1,
-    name: "Mi primer post",
-    href: "/articulos/mi-primer-post",
-    preview: "Hola, esto es mi primer post escrito en Markdown",
+    name: "¿Cómo el desarrollo web puede impulsar el crecimiento de tu negocio?",
+    href: "/articulos/como-el-desarrollo-web-puede-impulsar el-crecimiento-de-tu-negocio",
+    preview: "En la era digital en la que vivimos, tener una presencia en línea es esencial para cualquier empresa que desee alcanzar su máximo potencial. Y aunque puede haber muchas formas de aumentar la visibilidad en línea, una de las más efectivas es a través del desarrollo web. En este post, exploraremos cómo el desarrollo web puede impulsar el crecimiento de tu negocio, y los diferentes tipos de sitios web que pueden ayudarte a alcanzar tus objetivos empresariales.",
     imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Sitio%20Web%20imSoft.jpg?alt=media&token=24876c4a-b461-47d4-be61-67c4cff32881",
+      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Nosotros%20imSoft.jpg?alt=media&token=ac7d54a0-7048-4856-9230-b3a8ded8b04f",
   },
   {
     id: 2,
-    name: "Mi segundo post",
-    href: "/articulos/mi-segundo-post",
-    preview: "Hola, esto es mi segundo post escrito en Markdown",
+    name: "Los principales errores que las empresas cometen en su estrategia de desarrollo web",
+    href: "/articulos/los-principales-errores-que-las-empresas-cometen-en-su-estrategia-de-desarrollo-web",
+    preview: "El desarrollo web es una parte crítica del éxito empresarial en la era digital. Un sitio web bien diseñado y funcional puede ayudar a las empresas a aumentar su visibilidad en línea, atraer a nuevos clientes y hacer crecer su negocio. Sin embargo, muchas empresas cometen errores en su enfoque de desarrollo web, lo que puede resultar en sitios web poco efectivos y costosos. En este artículo, exploraremos los errores más comunes que las empresas cometen en su estrategia de desarrollo web y cómo pueden evitarse.",
     imageUrl:
-      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Nosotros%20imSoft.jpg?alt=media&token=ac7d54a0-7048-4856-9230-b3a8ded8b04f",
+      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Posicionamiento%20SEO%20imSoft.jpg?alt=media&token=4a19c099-9081-452d-94b4-5cf0e6ef9fc6",
   },
 ];
 
@@ -393,7 +393,7 @@ export const Header = () => {
                                         <h4 className="truncate text-base font-medium text-gray-900">
                                           {post.name}
                                         </h4>
-                                        <p className="mt-1 text-sm text-gray-500">
+                                        <p className="mt-1 text-sm text-gray-500 line-clamp-2">
                                           {post.preview}
                                         </p>
                                       </div>

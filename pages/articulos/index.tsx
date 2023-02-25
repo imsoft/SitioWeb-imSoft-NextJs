@@ -65,9 +65,9 @@ export const index: NextPage<Props> = (props) => {
                 </div>
                 <div className="flex flex-1 flex-col justify-between bg-white p-6">
                   <div className="flex-1">
-                    <p className="text-sm font-medium text-indigo-600">
+                    <p className="text-sm font-medium text-primary-600">
                       <Link href={`/${post.slug}`} className="hover:underline">
-                        {post.title}
+                        {post.category}
                       </Link>
                     </p>
                     <Link
@@ -77,8 +77,8 @@ export const index: NextPage<Props> = (props) => {
                       <p className="text-xl font-semibold text-gray-900">
                         {post.title}
                       </p>
-                      <p className="mt-3 text-base text-gray-500">
-                        {post.title}
+                      <p className="mt-3 text-base text-gray-500 line-clamp-4">
+                        {post.description}
                       </p>
                     </Link>
                   </div>
@@ -86,7 +86,7 @@ export const index: NextPage<Props> = (props) => {
                     <div className="flex space-x-1 text-sm text-gray-500">
                       <time dateTime={post.date}>{post.date}</time>
                       <span aria-hidden="true">&middot;</span>
-                      <span>{post.title} read</span>
+                      <span>{post.affiliation}</span>
                     </div>
                   </div>
                 </div>
