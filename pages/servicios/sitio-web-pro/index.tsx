@@ -145,7 +145,7 @@ const infoPricesSection: IPricesSection = {
 
 const infoCallToActionSection: ICallToActionSection = {
   image:
-    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Sitio%20web%20pro%20imSoft.jpg?alt=media&token=e8b38dea-4bd1-43d4-b754-bdb17c4ef37d",
+    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FSitio%20Web%20Pro%20imSoft.jpg?alt=media&token=4f1763f4-fa51-4485-a8f9-d99aa7e23b2a",
   topic: "Sitio Web Pro",
   title: "Soluciones web personalizadas y a medida para tu negocio",
   description:

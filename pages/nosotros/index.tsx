@@ -8,11 +8,11 @@ const nosotros = () => {
         <div className="lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
             <Image
-              className="h-56 w-full object-cover lg:absolute lg:h-full"
-              src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Nosotros%20imSoft.jpg?alt=media&token=ac7d54a0-7048-4856-9230-b3a8ded8b04f"
-              alt=""
-              height={100}
-              width={100}
+              className="h-56 w-full object-cover rounded-br-lg lg:absolute lg:h-full"
+              src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Fotos%20imSoft%2Fnosotros-imSoft.jpg?alt=media&token=562d50ef-cf49-4a19-adc6-6e0e7228a2d0"
+              alt="Nosotros - imSoft"
+              width={5760}
+              height={3840}
             />
           </div>
         </div>

@@ -146,7 +146,7 @@ const infoPricesSection: IPricesSection = {
 
 const infoCallToActionSection: ICallToActionSection = {
   image:
-    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Tienda%20en%20linea%20imSoft.jpg?alt=media&token=132bcfff-0013-447e-aadd-c5fdd37cd2df",
+    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FTienda%20en%20linea%20imSoft.jpg?alt=media&token=e712fe2d-418b-4915-87de-f6906f79b588",
   topic: "E-Commerce",
   title: "Tu tienda en línea hecha a medida",
   description:

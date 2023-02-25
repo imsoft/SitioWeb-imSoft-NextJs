@@ -97,7 +97,7 @@ const infoPricesSection: IPricesSection = {
 
 const infoCallToActionSection: ICallToActionSection = {
   image:
-    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Posicionamiento%20SEO%20imSoft.jpg?alt=media&token=4a19c099-9081-452d-94b4-5cf0e6ef9fc6",
+    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FPosicionamiento%20SEO%20imSoft.jpg?alt=media&token=7b9ea347-50a6-478b-b629-9c67f1f32222",
   topic: "Posicionamiento SEO",
   title: "Llevamos tu negocio al top de Google",
   description:

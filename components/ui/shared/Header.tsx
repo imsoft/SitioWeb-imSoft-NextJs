@@ -144,8 +144,8 @@ export const Header = () => {
               <span className="sr-only">imSoft</span>
               <Image
                 className="h-8 w-auto sm:h-10"
-                src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul.png?alt=media&token=0a5bf3d6-641b-4d5f-8f17-45e5dab67995"
-                alt=""
+                src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul_Optimizado.png?alt=media&token=3c214a9a-25d1-47b4-b594-dfcb61bf14bc"
+                alt="imSoft"
                 height={500}
                 width={500}
               />
@@ -384,7 +384,7 @@ export const Header = () => {
                                         <Image
                                           className="h-20 w-32 rounded-md object-cover"
                                           src={post.imageUrl}
-                                          alt=""
+                                          alt={post.name}
                                           height={100}
                                           width={100}
                                         />
@@ -449,8 +449,8 @@ export const Header = () => {
                 <div>
                   <Image
                     className="h-8 w-auto"
-                    src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul.png?alt=media&token=0a5bf3d6-641b-4d5f-8f17-45e5dab67995"
-                    alt="Your Company"
+                    src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul_Optimizado.png?alt=media&token=3c214a9a-25d1-47b4-b594-dfcb61bf14bc"
+                    alt="imSoft"
                     height={100}
                     width={100}
                   />

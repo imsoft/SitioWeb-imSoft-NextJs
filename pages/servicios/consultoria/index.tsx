@@ -97,7 +97,7 @@ const infoPricesSection: IPricesSection = {
 
 const infoCallToActionSection: ICallToActionSection = {
   image:
-    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Consultorio%20Web%20imSoft.jpg?alt=media&token=199421d1-a218-469c-bc3a-7375f385d947",
+    "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FConsultoria%20imSoft.jpg.jpg?alt=media&token=ee427b3a-06b4-40e0-abb6-ad79f0f3b31f",
   topic: "Consultoría de sitio web",
   title: "Estamos aquí para ayudar",
   description:

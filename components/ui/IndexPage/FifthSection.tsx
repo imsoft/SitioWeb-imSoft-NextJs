@@ -1,6 +1,6 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const features = [
   {
@@ -34,11 +34,11 @@ export const FifthSection = () => {
         <section aria-labelledby="features-heading" className="relative">
           <div className="aspect-w-3 aspect-h-2 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-16">
             <Image
-              src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Consultorio%20Web%20imSoft.jpg?alt=media&token=199421d1-a218-469c-bc3a-7375f385d947"
-              alt="Black leather journal with silver steel disc binding resting on wooden shelf with machined steel pen."
+              src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Fotos%20imSoft%2Fnuestros%20valores-imSoft.jpg?alt=media&token=ab50a027-2775-4242-adea-30f9c2b8af1f"
+              alt="Nuestros valores - imSoft"
               className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-              width={1770}
-              height={1180}
+              width={5760}
+              height={3840}
             />
           </div>
 
