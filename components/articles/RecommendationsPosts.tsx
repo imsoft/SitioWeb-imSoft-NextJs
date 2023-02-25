@@ -18,7 +18,7 @@ interface RecomendationPosts {
   language: string;
   slug: string;
   subtitle: string;
-  tags: string[];
+  tags: string;
   title: string;
   web: string;
 }
