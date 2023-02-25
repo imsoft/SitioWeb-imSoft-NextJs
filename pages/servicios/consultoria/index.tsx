@@ -3,7 +3,8 @@ import React from "react";
 import {
   IntroductorySection,
   FeaturesSection,
-  PricesSection,
+  MonthlyPaymentSection,
+  CallToActionSection,
 } from "../../../components/ui/services";
 
 import {
@@ -21,7 +22,6 @@ import {
   ClipboardDocumentCheckIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
-import { CallToActionSection } from "../../../components/ui/services/CallToActionSection";
 
 const infoIntroductorySection: IIntroductorySection = {
   title: "Consultoría de Sitio Web",
@@ -119,7 +119,7 @@ const index = () => {
         serviceFeatures={infoFeaturesSection.serviceFeatures}
       />
 
-      <PricesSection
+      <MonthlyPaymentSection
         topic={infoPricesSection.topic}
         description={infoPricesSection.description}
         listOfPackages={infoPricesSection.listOfPackages}

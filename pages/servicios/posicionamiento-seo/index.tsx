@@ -1,9 +1,12 @@
 import React from "react";
+
 import {
   FeaturesSection,
   IntroductorySection,
-  PricesSection,
+  MonthlyPaymentSection,
+  CallToActionSection,
 } from "../../../components/ui/services";
+
 import {
   ICallToActionSection,
   IFeaturesSection,
@@ -19,7 +22,6 @@ import {
   PencilSquareIcon,
   TagIcon,
 } from "@heroicons/react/24/outline";
-import { CallToActionSection } from "../../../components/ui/services/CallToActionSection";
 
 const infoIntroductorySection: IIntroductorySection = {
   title: "Posicionamiento SEO",
@@ -75,7 +77,7 @@ const infoPricesSection: IPricesSection = {
   description: "Lleguemos juntos a las primeras posiciones de Google",
   listOfPackages: [
     {
-      title: "Paquete de Posicionamiento SEO #1",
+      title: "Paquete de Posicionamiento SEO",
       description:
         "Con nuestro SEO, tu negocio alcanzará nuevos clientes y más ventas.",
       featuresOfPackage: [
@@ -117,7 +119,7 @@ const index = () => {
         serviceFeatures={infoFeaturesSection.serviceFeatures}
       />
 
-      <PricesSection
+      <MonthlyPaymentSection
         topic={infoPricesSection.topic}
         description={infoPricesSection.description}
         listOfPackages={infoPricesSection.listOfPackages}

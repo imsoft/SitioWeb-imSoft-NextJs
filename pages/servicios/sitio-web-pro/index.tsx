@@ -1,9 +1,12 @@
 import React from "react";
+
 import {
   FeaturesSection,
   IntroductorySection,
   PricesSection,
+  CallToActionSection
 } from "../../../components/ui/services";
+
 import {
   ICallToActionSection,
   IFeaturesSection,
@@ -19,7 +22,6 @@ import {
   PencilIcon,
   ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
-import { CallToActionSection } from "../../../components/ui/services/CallToActionSection";
 
 const infoIntroductorySection: IIntroductorySection = {
   title: "Sitio Web Pro",
@@ -94,7 +96,7 @@ const infoPricesSection: IPricesSection = {
         "Hosting",
         "Alta en Google negocios",
       ],
-      price: "10,000",
+      price: "13,999",
     },
     {
       title: "Paquete de Sitio Web Pro #2",
@@ -114,7 +116,7 @@ const infoPricesSection: IPricesSection = {
         "SEO básico",
         "Alta en Google negocios",
       ],
-      price: "20,000",
+      price: "15,999",
     },
     {
       title: "Paquete de Sitio Web Pro #3",
@@ -136,7 +138,7 @@ const infoPricesSection: IPricesSection = {
         "Generación de código de Google Analytics",
         "Alta en Google negocios",
       ],
-      price: "30,000",
+      price: "17,999",
     },
   ],
 };

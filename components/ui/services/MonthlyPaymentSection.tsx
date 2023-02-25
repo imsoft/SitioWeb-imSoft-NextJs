@@ -4,11 +4,11 @@ import Link from "next/link";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { IPricesSection } from "../../../interfaces";
 
-export const PricesSection = ({
-  topic,
-  description,
-  listOfPackages,
-}: IPricesSection) => {
+export const MonthlyPaymentSection = ({
+    topic,
+    description,
+    listOfPackages,
+  }: IPricesSection) => {
   return (
     <>
       <div className="pt-12 sm:pt-16 lg:pt-20">
@@ -24,7 +24,6 @@ export const PricesSection = ({
       </div>
 
       {listOfPackages.map((packageFeatures) => (
-        // <div className="mt-8 bg-white pb-16 sm:mt-12 sm:pb-20 lg:pb-28">
         <div key={packageFeatures.title} className="mt-8 bg-white sm:mt-12">
           <div className="relative">
             <div className="absolute inset-0 h-1/2" />
@@ -68,14 +67,9 @@ export const PricesSection = ({
                   </div>
                 </div>
                 <div className="bg-gray-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12">
-                  <p className="text-lg font-medium leading-6 text-gray-900">
-                    Realizará una inversión
-                  </p>
                   <div className="mt-4 flex items-center justify-center text-5xl font-bold tracking-tight text-gray-900">
-                    <span>${packageFeatures.price}</span>
-                    <span className="ml-3 text-xl font-medium tracking-normal text-gray-500">
-                      MXN
-                    </span>
+                    {/* <span>${packageFeatures.price}</span> */}
+                    <span>Pregunta por <br/> tu cotización</span>
                   </div>
                   <p className="mt-4 text-sm">
                     <Link
@@ -96,11 +90,6 @@ export const PricesSection = ({
                     </div>
                   </div>
                   <div className="mt-4 text-sm">
-                    <Link href="#" className="font-medium text-gray-900">
-                      <span className="font-normal text-gray-500">
-                        IVA incluido
-                      </span>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -109,5 +98,5 @@ export const PricesSection = ({
         </div>
       ))}
     </>
-  );
-};
+  )
+}
