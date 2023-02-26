@@ -5,5 +5,4 @@ export interface IFooter {
   company: ICommon[];
   articles: ICommon[];
   legal: ICommon[];
-  social: ISocial[];
 }
