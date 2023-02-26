@@ -4,36 +4,16 @@ import { getAllFilesMetadata, getFileBySlug, getFiles } from "../../lib/mdx";
 import { MDXRemote } from "next-mdx-remote";
 import MdxComponent from "../../components/articles/MdxComponent";
 import RecommendationsPosts from "../../components/articles/RecommendationsPosts";
+import { IPost } from '../../interfaces';
 
 interface Props {
   source: object;
   frontMatter: object;
-  posts: Posts[];
-}
-
-interface Posts {
-  address: string;
-  author: string;
-  affiliation: string;
-  canonical_url: string;
-  category: string;
-  comment: string;
-  copyright: string;
-  date: string;
-  description: string;
-  email: string;
-  image: string;
-  keywords: string;
-  language: string;
-  slug: string;
-  subtitle: string;
-  tags: string;
-  title: string;
-  web: string;
+  posts: IPost[];
 }
 
 const Post = ({ source, frontMatter, posts }: Props) => {
-  const [randomObjectsResult, setRandomObjectsResult] = useState<Posts[]>([]);
+  const [randomObjectsResult, setRandomObjectsResult] = useState<IPost[]>([]);
 
   useEffect(() => {
     const randomIndexes = new Set<number>();

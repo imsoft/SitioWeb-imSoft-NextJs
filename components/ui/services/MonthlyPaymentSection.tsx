@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { IPricesSection } from "../../../interfaces";
+
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 export const MonthlyPaymentSection = ({
     topic,

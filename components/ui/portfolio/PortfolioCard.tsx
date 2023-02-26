@@ -1,7 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
 import { IPortfolioCard } from "../../../interfaces";
+
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export const PortfolioCard = ({

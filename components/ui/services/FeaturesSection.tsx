@@ -1,4 +1,5 @@
 import React from "react";
+
 import { IFeaturesSection } from "../../../interfaces";
 
 export const FeaturesSection = ({

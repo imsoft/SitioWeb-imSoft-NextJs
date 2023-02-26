@@ -1,5 +1,7 @@
 import React from "react";
+
 import MessageComponent from "../../components/ui/shared/MessageComponent";
+
 import { INotificationMessage } from "../../interfaces";
 
 const infoNotificationMessage: INotificationMessage = {

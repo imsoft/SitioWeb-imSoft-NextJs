@@ -1,5 +1,7 @@
 import React from "react";
+
 import { PortfolioCard } from "../../components/ui/portfolio";
+
 import { IPortfolioCard } from "../../interfaces";
 
 const portfolio: IPortfolioCard[] = [

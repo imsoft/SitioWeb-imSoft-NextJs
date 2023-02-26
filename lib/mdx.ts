@@ -22,7 +22,7 @@ const root = process.cwd();
 export const getFiles = () => fs.readdirSync(path.join(root, "posts"));
 
 export const getFileBySlug = async (slug: string) => {
-  console.log("ruta de archivo:", path.join(root, "posts", `${slug}.mdx`));
+  // console.log("ruta de archivo:", path.join(root, "posts", `${slug}.mdx`));
   const mdxSource = fs.readFileSync(
     path.join(root, "posts", `${slug}.mdx`),
     "utf-8"

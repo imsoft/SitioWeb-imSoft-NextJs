@@ -1,3 +1,8 @@
+import React from "react";
+import Link from "next/link";
+
+import { Services } from "../../../interfaces";
+
 import {
   CodeBracketIcon,
   CodeBracketSquareIcon,
@@ -5,9 +10,6 @@ import {
   PresentationChartBarIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import React from "react";
-import { Services } from "../../../interfaces";
 
 const infoServices: Services[] = [
   {

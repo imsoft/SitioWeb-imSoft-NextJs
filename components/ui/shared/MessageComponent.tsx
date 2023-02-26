@@ -1,5 +1,9 @@
 import React from 'react'
+import Image from "next/image";
+import Link from 'next/link';
+
 import { INotificationMessage, Services } from '../../../interfaces'
+
 import {
     ChevronRightIcon,
     ClipboardDocumentCheckIcon,
@@ -8,8 +12,6 @@ import {
     ShoppingBagIcon,
     ArrowTrendingUpIcon,
   } from "@heroicons/react/24/outline";
-import Link from 'next/link';
-import Image from "next/image";
 
 const links: Services[] = [
     {

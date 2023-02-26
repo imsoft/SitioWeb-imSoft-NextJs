@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FC, useState } from "react";
+import React, { ChangeEvent, useState } from "react";
+
 import {
   EnvelopeIcon,
   ExclamationCircleIcon,

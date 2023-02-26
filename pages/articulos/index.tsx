@@ -3,30 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { GetStaticProps, NextPage } from "next";
 import { getAllFilesMetadata } from "../../lib/mdx";
-
-interface Posts {
-  address: string;
-  author: string;
-  affiliation: string;
-  canonical_url: string;
-  category: string;
-  comment: string;
-  copyright: string;
-  date: string;
-  description: string;
-  email: string;
-  image: string;
-  keywords: string;
-  language: string;
-  slug: string;
-  subtitle: string;
-  tags: string;
-  title: string;
-  web: string;
-}
+import { IPost } from "../../interfaces";
 
 interface Props {
-  posts: Posts[];
+  posts: IPost[];
 }
 
 export const index: NextPage<Props> = (props) => {

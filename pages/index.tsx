@@ -1,10 +1,10 @@
 import {
-  FifthSection,
   FirstSection,
-  FourthSection,
   SecondSection,
-  SixthSection,
   ThirdSection,
+  FourthSection,
+  FifthSection,
+  SixthSection,
 } from "../components/ui/IndexPage";
 
 const index = () => {

@@ -1,8 +1,10 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import { ICallToActionSection } from "../../../interfaces";
 import Image from "next/image";
+import Link from "next/link";
+
+import { ICallToActionSection } from "../../../interfaces";
+
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export const CallToActionSection = ({
   image,

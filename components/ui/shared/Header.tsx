@@ -1,5 +1,11 @@
 import { Fragment, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import { IHeader } from "../../../interfaces";
+
 import { Popover, Transition } from "@headlessui/react";
+
 import {
   Bars3Icon,
   PresentationChartBarIcon,
@@ -17,9 +23,6 @@ import {
   DocumentDuplicateIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Link from "next/link";
-import { IHeader } from "../../../interfaces";
-import Image from "next/image";
 
 const linkWhatsappGeneral = process.env.NEXT_PUBLIC_LINK_WHATSAPP_GENERAL;
 

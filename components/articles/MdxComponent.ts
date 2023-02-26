@@ -1,11 +1,11 @@
-import YouTube from "./YouTube";
-import Spotify from "./Spotify";
 import ArticleImage from './ArticleImage';
+import Spotify from "./Spotify";
+import YouTube from "./YouTube";
 
 const mediaServices = {
-  YouTube,
-  Spotify,
   ArticleImage,
+  Spotify,
+  YouTube,
 };
 
 export default mediaServices;

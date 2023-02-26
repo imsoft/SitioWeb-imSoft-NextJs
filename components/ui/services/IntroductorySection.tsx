@@ -1,5 +1,6 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+
 import { IIntroductorySection } from "../../../interfaces";
 
 const linkYoutube = process.env.NEXT_PUBLIC_LINK_YOUTUBE;

@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
+
 import Metatags from "../components/metatags/Metatags";
 
 class MyDocument extends Document {
