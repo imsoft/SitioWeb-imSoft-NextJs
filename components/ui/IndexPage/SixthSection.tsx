@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 export const SixthSection = () => {
-  const linkWhatsappGeneral = process.env.NEXT_PUBLIC_LINK_WHATSAPP_GENERAL;
+
+  const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS;
 
   return (
     <>
@@ -18,7 +19,7 @@ export const SixthSection = () => {
             dispositivos.
           </p>
           <Link
-            href={`${linkWhatsappGeneral}`}
+            href={`${linkWhatsappBusiness}`}
             target="_blank"
             className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-primary-500 sm:w-auto"
           >

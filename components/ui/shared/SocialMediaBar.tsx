@@ -3,12 +3,12 @@ import Link from "next/link";
 
 import { ISocial } from "../../../interfaces";
 
-const linkWhatsappGeneral = process.env.NEXT_PUBLIC_LINK_WHATSAPP_GENERAL;
 const linkFacebook = process.env.NEXT_PUBLIC_LINK_FACEBOOK;
 const linkInstagram = process.env.NEXT_PUBLIC_LINK_INSTAGRAM;
 const linkLinkedIn = process.env.NEXT_PUBLIC_LINK_LINKEDIN;
 const linkTwitter = process.env.NEXT_PUBLIC_LINK_TWITTER;
 const linkTiktok = process.env.NEXT_PUBLIC_LINK_TIKTOK;
+const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS;
 const linkYoutube = process.env.NEXT_PUBLIC_LINK_YOUTUBE;
 
 const socialMedia: ISocial[] = [
@@ -98,7 +98,7 @@ const socialMedia: ISocial[] = [
   },
   {
     name: "WhatsApp",
-    href: `${linkWhatsappGeneral}`,
+    href: `${linkWhatsappBusiness}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
