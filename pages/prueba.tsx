@@ -3,13 +3,13 @@ import Head from "next/head";
 import Link from "next/link";
 
 const prueba = () => {
-  const linkFacebook = process.env.NEXT_PUBLIC_LINK_FACEBOOK;
-  const linkInstagram = process.env.NEXT_PUBLIC_LINK_INSTAGRAM;
-  const linkLinkedIn = process.env.NEXT_PUBLIC_LINK_LINKEDIN;
-  const linkTwitter = process.env.NEXT_PUBLIC_LINK_TWITTER;
-  const linkTiktok = process.env.NEXT_PUBLIC_LINK_TIKTOK;
-  const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS;
-  const linkYoutube = process.env.NEXT_PUBLIC_LINK_YOUTUBE;
+  const linkFacebook = process.env.NEXT_PUBLIC_LINK_FACEBOOK?.toString();
+  const linkInstagram = process.env.NEXT_PUBLIC_LINK_INSTAGRAM?.toString();
+  const linkLinkedIn = process.env.NEXT_PUBLIC_LINK_LINKEDIN?.toString();
+  const linkTwitter = process.env.NEXT_PUBLIC_LINK_TWITTER?.toString();
+  const linkTiktok = process.env.NEXT_PUBLIC_LINK_TIKTOK?.toString();
+  const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS?.toString();
+  const linkYoutube = process.env.NEXT_PUBLIC_LINK_YOUTUBE?.toString();
 
   const handleShareClick = () => {
     if (navigator.share) {
