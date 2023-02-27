@@ -103,8 +103,6 @@ const articles: IHeader[] = [
     href: "/articulos",
     icon: DocumentDuplicateIcon,
   },
-  // { name: "Lecturas rápidas", href: "#", icon: BoltIcon },
-  // { name: "Artículo random", href: "#", icon: ArrowPathIcon },
 ];
 
 const blogPosts = [
@@ -112,7 +110,8 @@ const blogPosts = [
     id: 1,
     name: "¿Cómo el desarrollo web puede impulsar el crecimiento de tu negocio?",
     href: "/articulos/como-el-desarrollo-web-puede-impulsar el-crecimiento-de-tu-negocio",
-    preview: "En la era digital en la que vivimos, tener una presencia en línea es esencial para cualquier empresa que desee alcanzar su máximo potencial. Y aunque puede haber muchas formas de aumentar la visibilidad en línea, una de las más efectivas es a través del desarrollo web. En este post, exploraremos cómo el desarrollo web puede impulsar el crecimiento de tu negocio, y los diferentes tipos de sitios web que pueden ayudarte a alcanzar tus objetivos empresariales.",
+    preview:
+      "En la era digital en la que vivimos, tener una presencia en línea es esencial para cualquier empresa que desee alcanzar su máximo potencial. Y aunque puede haber muchas formas de aumentar la visibilidad en línea, una de las más efectivas es a través del desarrollo web. En este post, exploraremos cómo el desarrollo web puede impulsar el crecimiento de tu negocio, y los diferentes tipos de sitios web que pueden ayudarte a alcanzar tus objetivos empresariales.",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Imagenes%20Art%C3%ADculos%2Fcomo%20el%20desarrollo%20web%20puede%20impulsar%20el%20crecimiento%20de%20tu%20negocio-imSoft.jpg?alt=media&token=8adb31e4-6798-4bc4-b84e-ac6a46d63922",
   },
@@ -120,7 +119,8 @@ const blogPosts = [
     id: 2,
     name: "Los principales errores que las empresas cometen en su estrategia de desarrollo web",
     href: "/articulos/los-principales-errores-que-las-empresas-cometen-en-su-estrategia-de-desarrollo-web",
-    preview: "El desarrollo web es una parte crítica del éxito empresarial en la era digital. Un sitio web bien diseñado y funcional puede ayudar a las empresas a aumentar su visibilidad en línea, atraer a nuevos clientes y hacer crecer su negocio. Sin embargo, muchas empresas cometen errores en su enfoque de desarrollo web, lo que puede resultar en sitios web poco efectivos y costosos. En este artículo, exploraremos los errores más comunes que las empresas cometen en su estrategia de desarrollo web y cómo pueden evitarse.",
+    preview:
+      "El desarrollo web es una parte crítica del éxito empresarial en la era digital. Un sitio web bien diseñado y funcional puede ayudar a las empresas a aumentar su visibilidad en línea, atraer a nuevos clientes y hacer crecer su negocio. Sin embargo, muchas empresas cometen errores en su enfoque de desarrollo web, lo que puede resultar en sitios web poco efectivos y costosos. En este artículo, exploraremos los errores más comunes que las empresas cometen en su estrategia de desarrollo web y cómo pueden evitarse.",
     imageUrl:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Imagenes%20Art%C3%ADculos%2Flos%20principales%20errores%20que%20las%20empresas%20cometen%20en%20su%20estrategia%20de%20desarrollo%20web-imSoft.jpg?alt=media&token=94871249-4ef3-4c21-b93a-c1a8b43195d1",
   },
@@ -133,6 +133,19 @@ function classNames(...classes: string[]) {
 export const Header = () => {
   const [isShowingServices, setIsShowingServices] = useState(false);
   const [isShowingMore, setIsShowingMore] = useState(false);
+  const [isShowingResponsiveMenu, setIsShowingResponsiveMenu] = useState(false);
+
+  const handleShowingServices = () => {
+    setIsShowingServices(!isShowingServices);
+  };
+
+  const handleShowingMore = () => {
+    setIsShowingMore(!isShowingMore);
+  };
+
+  const handleShowingResponsiveMenu = () => {
+    setIsShowingResponsiveMenu(!isShowingResponsiveMenu);
+  };
 
   return (
     <Popover className="relative bg-white">
@@ -156,7 +169,7 @@ export const Header = () => {
           </div>
           <div className="flex-1" />
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+            <Popover.Button onClick={handleShowingResponsiveMenu} className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
               <span className="sr-only">Abrir Menu imSoft</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -177,8 +190,8 @@ export const Header = () => {
                         open ? "text-gray-900" : "text-gray-500",
                         "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                       )}
-                      onMouseEnter={() => setIsShowingServices(true)}
-                      onMouseLeave={() => setIsShowingServices(false)}
+                      onMouseEnter={handleShowingServices}
+                      onMouseLeave={handleShowingServices}
                     >
                       <span>Servicios</span>
                       <ChevronDownIcon
@@ -201,8 +214,8 @@ export const Header = () => {
                       show={isShowingServices}
                     >
                       <Popover.Panel
-                        onMouseEnter={() => setIsShowingServices(true)}
-                        onMouseLeave={() => setIsShowingServices(false)}
+                        onMouseEnter={handleShowingServices}
+                        onMouseLeave={handleShowingServices}
                         className="absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block"
                       >
                         <div className="mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
@@ -211,7 +224,7 @@ export const Header = () => {
                               key={item.name}
                               href={item.href}
                               className="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50"
-                              onClick={() => setIsShowingServices(false)}
+                              onClick={handleShowingServices}
                             >
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
@@ -248,7 +261,7 @@ export const Header = () => {
                                   href={item.href}
                                   target="_blank"
                                   className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-                                  onClick={() => setIsShowingServices(false)}
+                                  onClick={handleShowingServices}
                                 >
                                   <item.icon
                                     className="h-6 w-6 flex-shrink-0 text-gray-400"
@@ -285,8 +298,8 @@ export const Header = () => {
                         open ? "text-gray-900" : "text-gray-500",
                         "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                       )}
-                      onMouseEnter={() => setIsShowingMore(true)}
-                      onMouseLeave={() => setIsShowingMore(false)}
+                      onMouseEnter={handleShowingMore}
+                      onMouseLeave={handleShowingMore}
                     >
                       <span>Más</span>
                       <ChevronDownIcon
@@ -309,8 +322,8 @@ export const Header = () => {
                       show={isShowingMore}
                     >
                       <Popover.Panel
-                        onMouseEnter={() => setIsShowingMore(true)}
-                        onMouseLeave={() => setIsShowingMore(false)}
+                        onMouseEnter={handleShowingMore}
+                        onMouseLeave={handleShowingMore}
                         className="absolute inset-x-0 top-full z-10 hidden transform shadow-lg md:block"
                       >
                         <div className="absolute inset-0 flex">
@@ -328,7 +341,7 @@ export const Header = () => {
                                   <li
                                     key={item.name}
                                     className="flow-root"
-                                    onClick={() => setIsShowingMore(false)}
+                                    onClick={handleShowingMore}
                                   >
                                     <Link
                                       href={item.href}
@@ -353,7 +366,7 @@ export const Header = () => {
                                   <li
                                     key={item.name}
                                     className="flow-root"
-                                    onClick={() => setIsShowingMore(false)}
+                                    onClick={handleShowingMore}
                                   >
                                     <Link
                                       href={item.href}
@@ -381,7 +394,7 @@ export const Header = () => {
                                     <Link
                                       href={post.href}
                                       className="-m-3 flex rounded-lg p-3 hover:bg-gray-100"
-                                      onClick={() => setIsShowingMore(false)}
+                                      onClick={handleShowingMore}
                                     >
                                       <div className="hidden flex-shrink-0 sm:block">
                                         <Image
@@ -409,7 +422,7 @@ export const Header = () => {
                               <Link
                                 href="/articulos"
                                 className="text-primary-600 hover:text-primary-500"
-                                onClick={() => setIsShowingMore(false)}
+                                onClick={handleShowingMore}
                               >
                                 Ver los artículos
                                 <span aria-hidden="true"> &rarr;</span>
@@ -441,6 +454,7 @@ export const Header = () => {
         leave="duration-100 ease-in"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
+        show={isShowingResponsiveMenu}
       >
         <Popover.Panel
           focus
@@ -450,16 +464,18 @@ export const Header = () => {
             <div className="px-5 pt-5 pb-6 sm:pb-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <Image
-                    className="h-8 w-auto"
-                    src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul_Optimizado.png?alt=media&token=3c214a9a-25d1-47b4-b594-dfcb61bf14bc"
-                    alt="imSoft"
-                    height={100}
-                    width={100}
-                  />
+                  <Link href={"/"}>
+                    <Image
+                      className="h-8 w-auto"
+                      src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul_Optimizado.png?alt=media&token=3c214a9a-25d1-47b4-b594-dfcb61bf14bc"
+                      alt="imSoft"
+                      height={100}
+                      width={100}
+                    />
+                  </Link>
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+                  <Popover.Button onClick={handleShowingResponsiveMenu} className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                     <span className="sr-only">Cerrar menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -473,6 +489,7 @@ export const Header = () => {
                         key={item.name}
                         href={item.href}
                         className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+                        onClick={handleShowingResponsiveMenu}
                       >
                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-primary-500 text-white sm:h-12 sm:w-12">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -487,6 +504,7 @@ export const Header = () => {
                     <Link
                       href="/servicios"
                       className="font-medium text-primary-600 hover:text-primary-500"
+                      onClick={handleShowingResponsiveMenu}
                     >
                       Ver todos los servicios
                       <span aria-hidden="true"> &rarr;</span>
@@ -500,36 +518,42 @@ export const Header = () => {
                 <Link
                   href="/nosotros"
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
+                  onClick={handleShowingResponsiveMenu}
                 >
                   Conócenos
                 </Link>
                 <Link
                   href="/portafolio"
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
+                  onClick={handleShowingResponsiveMenu}
                 >
                   Portafolio
                 </Link>
                 <Link
                   href="/articulos"
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
+                  onClick={handleShowingResponsiveMenu}
                 >
                   Artículos
                 </Link>
                 <Link
                   href="/avisoDePrivacidad"
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
+                  onClick={handleShowingResponsiveMenu}
                 >
                   Aviso de privacidad
                 </Link>
                 <Link
                   href={`${linkWhatsappGeneral}`}
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
+                  onClick={handleShowingResponsiveMenu}
                 >
                   WhatsApp
                 </Link>
                 <Link
                   href="/contacto"
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
+                  onClick={handleShowingResponsiveMenu}
                 >
                   Contacto
                 </Link>
