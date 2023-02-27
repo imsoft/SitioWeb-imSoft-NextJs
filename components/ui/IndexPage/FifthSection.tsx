@@ -32,13 +32,14 @@ export const FifthSection = () => {
     <>
       <div className="bg-white">
         <section aria-labelledby="features-heading" className="relative">
-          <div className="aspect-w-3 aspect-h-2 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-16">
+          <div className="h-auto w-auto aspect-w-3 aspect-h-2 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-16">
             <Image
               src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Fotos%20imSoft%2Fnuestros%20valores-imSoft.jpg?alt=media&token=ab50a027-2775-4242-adea-30f9c2b8af1f"
               alt="Nuestros valores - imSoft"
               className="h-full w-full object-cover object-center lg:h-full lg:w-full"
               width={5760}
               height={3840}
+              priority
             />
           </div>
 

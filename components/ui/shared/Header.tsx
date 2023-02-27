@@ -159,7 +159,7 @@ export const Header = () => {
             <Link href="/" className="flex">
               <span className="sr-only">imSoft</span>
               <Image
-                className="h-8 w-auto sm:h-10"
+                className="h-auto w-auto sm:h-10"
                 src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FimSoft_Transparente_Azul_Optimizado.png?alt=media&token=3c214a9a-25d1-47b4-b594-dfcb61bf14bc"
                 alt="imSoft"
                 height={500}
