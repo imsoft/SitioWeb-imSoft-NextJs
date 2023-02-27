@@ -1,10 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
+import { whatsappBusinessLink } from "../../../data";
+
 export const ConversionBar = () => {
-
-  const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS;
-
   return (
     <>
       <div className="md:flex md:justify-around bg-primary-500 py-1.5">
@@ -15,7 +14,7 @@ export const ConversionBar = () => {
         </div>
         <div className="">
           <Link
-            href={`${linkWhatsappBusiness}`}
+            href={`${whatsappBusinessLink}`}
             target="_blank"
             className="flex justify-center items-center gap-2"
           >

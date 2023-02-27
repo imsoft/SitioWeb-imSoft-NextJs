@@ -3,18 +3,20 @@ import Link from "next/link";
 
 import { ISocial } from "../../../interfaces";
 
-const linkFacebook = process.env.NEXT_PUBLIC_LINK_FACEBOOK;
-const linkInstagram = process.env.NEXT_PUBLIC_LINK_INSTAGRAM;
-const linkLinkedIn = process.env.NEXT_PUBLIC_LINK_LINKEDIN;
-const linkTwitter = process.env.NEXT_PUBLIC_LINK_TWITTER;
-const linkTiktok = process.env.NEXT_PUBLIC_LINK_TIKTOK;
-const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS;
-const linkYoutube = process.env.NEXT_PUBLIC_LINK_YOUTUBE;
+import {
+  facebookLink,
+  instagramLink,
+  linkedInLink,
+  tiktokLink,
+  twitterLink,
+  whatsappBusinessLink,
+  youtubeLink,
+} from "../../../data";
 
 const socialMedia: ISocial[] = [
   {
     name: "Facebook",
-    href: `${linkFacebook}`,
+    href: `${facebookLink}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +36,7 @@ const socialMedia: ISocial[] = [
   },
   {
     name: "Instagram",
-    href: `${linkInstagram}`,
+    href: `${instagramLink}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +52,7 @@ const socialMedia: ISocial[] = [
   },
   {
     name: "LinkedIn",
-    href: `${linkLinkedIn}`,
+    href: `${linkedInLink}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +68,7 @@ const socialMedia: ISocial[] = [
   },
   {
     name: "Twitter",
-    href: `${linkTwitter}`,
+    href: `${twitterLink}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +84,7 @@ const socialMedia: ISocial[] = [
   },
   {
     name: "Tiktok",
-    href: `${linkTiktok}`,
+    href: `${tiktokLink}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +100,7 @@ const socialMedia: ISocial[] = [
   },
   {
     name: "WhatsApp",
-    href: `${linkWhatsappBusiness}`,
+    href: `${whatsappBusinessLink}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +116,7 @@ const socialMedia: ISocial[] = [
   },
   {
     name: "YouTube",
-    href: `${linkYoutube}`,
+    href: `${youtubeLink}`,
     icon: () => (
       <svg
         xmlns="http://www.w3.org/2000/svg"

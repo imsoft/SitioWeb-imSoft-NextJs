@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import { IHeader } from "../../../interfaces";
 
+import { whatsappBusinessLink } from "../../../data";
+
 import { Popover, Transition } from "@headlessui/react";
 
 import {
@@ -23,8 +25,6 @@ import {
   DocumentDuplicateIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
-const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS;
 
 const services: IHeader[] = [
   {
@@ -77,7 +77,7 @@ const callsToAction: IHeader[] = [
   },
   {
     name: "Contactanos",
-    href: `${linkWhatsappBusiness}`,
+    href: `${whatsappBusinessLink}`,
     icon: ChatBubbleLeftRightIcon,
   },
 ];
@@ -544,7 +544,7 @@ export const Header = () => {
                   Aviso de privacidad
                 </Link>
                 <Link
-                  href={`${linkWhatsappBusiness}`}
+                  href={`${whatsappBusinessLink}`}
                   className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700"
                   onClick={handleShowingResponsiveMenu}
                 >

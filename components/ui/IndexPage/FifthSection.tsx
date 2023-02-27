@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { whatsappBusinessLink } from "../../../data";
+
 const features = [
   {
     name: "Innovación",
@@ -26,9 +28,6 @@ const features = [
 ];
 
 export const FifthSection = () => {
-
-  const linkWhatsappBusiness = process.env.NEXT_PUBLIC_LINK_WHATSAPP_BUSINESS;
-
   return (
     <>
       <div className="bg-white">
@@ -75,7 +74,7 @@ export const FifthSection = () => {
               <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <Link
-                    href={`${linkWhatsappBusiness}`}
+                    href={`${whatsappBusinessLink}`}
                     target="_blank"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary-500 px-8 py-3 text-base font-medium text-white hover:bg-primary-500 md:py-4 md:px-10 md:text-lg"
                   >
