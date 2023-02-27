@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { IPost } from "../../interfaces";
+import { IPostCard } from "../../interfaces";
 
 const PostCard = ({
   title,
@@ -11,7 +11,7 @@ const PostCard = ({
   description,
   date,
   affiliation,
-}: IPost) => {
+}: IPostCard) => {
   return (
     <>
       <div

@@ -32,6 +32,7 @@ export const index: NextPage<Props> = (props) => {
           <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
             {props.posts.map((post) => (
               <PostCard
+                key={post.title}
                 title={post.title}
                 image={post.image}
                 slug={post.slug}

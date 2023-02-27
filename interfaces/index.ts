@@ -7,6 +7,7 @@ export * from './introductorySection';
 export * from './notificationMessage';
 export * from './portfolioCard';
 export * from './post';
+export * from './postCard';
 export * from './pricesSection';
 export * from './services';
 export * from './social';
