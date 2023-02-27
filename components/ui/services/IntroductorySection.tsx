@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { IIntroductorySection } from "../../../interfaces";
 
-const linkYoutube = process.env.NEXT_PUBLIC_LINK_YOUTUBE;
+import { youtubeLink } from "../../../data";
 
 export const IntroductorySection = ({
   title,
@@ -19,7 +19,7 @@ export const IntroductorySection = ({
                 <span className="text-gray-600">
                   Ve nuestro ultimo video{" "}
                   <Link
-                    href={`${linkYoutube}`}
+                    href={`${youtubeLink}`}
                     className="font-semibold text-primary-600"
                     target={"_blank"}
                   >
