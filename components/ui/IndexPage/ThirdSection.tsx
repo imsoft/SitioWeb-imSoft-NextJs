@@ -47,8 +47,8 @@ export const ThirdSection = () => {
             className="absolute inset-0 h-full w-full object-cover rounded-tl-lg"
             src="https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Fotos%20imSoft%2Fdisen%CC%83amos%20sitios%20web%20para%20aumentar%20las%20ventas-imSoft.jpg?alt=media&token=4614732d-0f0d-496f-880d-a9035f822bb4"
             alt="Diseñamos sitios web para aumentar las ventas - imSoft"
-            width={6500}
-            height={3789}
+            width={5760}
+            height={3840}
           />
         </div>
       </div>

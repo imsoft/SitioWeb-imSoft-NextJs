@@ -16,7 +16,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="es">
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/icons/favicon-imSoft.png" />

@@ -71,6 +71,7 @@ export const FourthSection = () => {
                       <service.icon
                         className="h-8 w-8 text-white"
                         aria-hidden="true"
+                        aria-describedby={`${service.nameOfService}`}
                       />
                     </span>
                   </Link>
