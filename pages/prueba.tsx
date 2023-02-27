@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { facebookLink, instagramLink, linkedInLink, tiktokLink, twitterLink, whatsappBusinessLink, youtubeLink } from "../data";
 
 const prueba = () => {
   const linkFacebook = process.env.NEXT_PUBLIC_LINK_FACEBOOK?.toString();
@@ -78,6 +79,29 @@ const prueba = () => {
           <p>Ir a WhatsApp</p>
         </Link>
         <Link href={"https://api.whatsapp.com/message/6P7VAOCL442IH1?autoload=1&app_absent=0"}>
+          <p>Ir a YouTube</p>
+        </Link>
+        <br />
+        <h2>Enlaces desde carpeta data</h2>
+        <Link href={`${facebookLink}`}>
+          <p>Ir a Facebook</p>
+        </Link>
+        <Link href={`${instagramLink}`}>
+          <p>Ir a Instagram</p>
+        </Link>
+        <Link href={`${linkedInLink}`}>
+          <p>Ir a LinkedIn</p>
+        </Link>
+        <Link href={`${twitterLink}`}>
+          <p>Ir a Twitter</p>
+        </Link>
+        <Link href={`${tiktokLink}`}>
+          <p>Ir a Tiktok</p>
+        </Link>
+        <Link href={`${whatsappBusinessLink}`}>
+          <p>Ir a WhatsApp</p>
+        </Link>
+        <Link href={`${youtubeLink}`}>
           <p>Ir a YouTube</p>
         </Link>
       </div>
