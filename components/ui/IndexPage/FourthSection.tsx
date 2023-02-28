@@ -66,15 +66,13 @@ export const FourthSection = () => {
             {infoServices.map((service) => (
               <div key={service.nameOfService}>
                 <div>
-                  <Link href={service.href}>
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white bg-opacity-10">
-                      <service.icon
-                        className="h-8 w-8 text-white"
-                        aria-hidden="true"
-                        aria-describedby={`${service.nameOfService}`}
-                      />
-                    </span>
-                  </Link>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white bg-opacity-10">
+                    <service.icon
+                      className="h-8 w-8 text-white"
+                      aria-hidden="true"
+                      aria-describedby={`${service.nameOfService}`}
+                    />
+                  </span>
                 </div>
                 <div className="mt-6">
                   <Link href={service.href}>
