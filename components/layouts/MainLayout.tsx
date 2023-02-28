@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React from "react";
 
 import { ConversionBar, Footer, Header } from "../ui/shared";
@@ -10,7 +9,6 @@ type Props = {
 export const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <Head children={undefined}></Head>
       <header>
         <ConversionBar />
         <Header />
