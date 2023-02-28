@@ -1,10 +1,13 @@
 import React from "react";
+import Head from "next/head";
+
+import { Metatags } from "../../../components/metatags";
 
 import {
   FeaturesSection,
   IntroductorySection,
   PricesSection,
-  CallToActionSection
+  CallToActionSection,
 } from "../../../components/ui/services";
 
 import {
@@ -155,30 +158,51 @@ const infoCallToActionSection: ICallToActionSection = {
 const index = () => {
   return (
     <>
-      <IntroductorySection
-        title={infoIntroductorySection.title}
-        description={infoIntroductorySection.description}
-      />
+      <Head>
+        <Metatags
+          title={"Sitio Web Pro | imSoft"}
+          description={
+            "Diseñamos y desarrollamos sitios web que se adaptan a tus necesidades y a las de tu audiencia, y que reflejan la esencia de tu negocio. Además, utilizamos tecnología de vanguardia para garantizar que tu sitio web sea atractivo, responsivo y fácil de usar. Si quieres que tu negocio tenga presencia en línea y alcance nuevos clientes, no dudes en contactarme y solicitar una cotización. Con mi experiencia y conocimientos en el campo del desarrollo web, estoy seguro de que podemos ayudarte a alcanzar tus objetivos y a tener éxito en el mundo digital."
+          }
+          keywords={"Pagina Web Pro, Sitio Web Pro, imSoft"}
+          author={"Brandon Uriel García Ramos"}
+          subject={"Sitio Web Pro"}
+          date={"01/01/2023"}
+          type={"Sitio Web Pro"}
+          source={"https://www.imsoft.io/sitio-web-pro"}
+          image={
+            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FSitio%20Web%20Pro%20imSoft.jpg?alt=media&token=4f1763f4-fa51-4485-a8f9-d99aa7e23b2a"
+          }
+          url={"https://www.imsoft.io/sitio-web-pro"}
+        />
+      </Head>
 
-      <FeaturesSection
-        topic={infoFeaturesSection.topic}
-        title={infoFeaturesSection.title}
-        description={infoFeaturesSection.description}
-        serviceFeatures={infoFeaturesSection.serviceFeatures}
-      />
+      <main>
+        <IntroductorySection
+          title={infoIntroductorySection.title}
+          description={infoIntroductorySection.description}
+        />
 
-      <PricesSection
-        topic={infoPricesSection.topic}
-        description={infoPricesSection.description}
-        listOfPackages={infoPricesSection.listOfPackages}
-      />
+        <FeaturesSection
+          topic={infoFeaturesSection.topic}
+          title={infoFeaturesSection.title}
+          description={infoFeaturesSection.description}
+          serviceFeatures={infoFeaturesSection.serviceFeatures}
+        />
 
-      <CallToActionSection
-        image={infoCallToActionSection.image}
-        topic={infoCallToActionSection.topic}
-        title={infoCallToActionSection.title}
-        description={infoCallToActionSection.description}
-      />
+        <PricesSection
+          topic={infoPricesSection.topic}
+          description={infoPricesSection.description}
+          listOfPackages={infoPricesSection.listOfPackages}
+        />
+
+        <CallToActionSection
+          image={infoCallToActionSection.image}
+          topic={infoCallToActionSection.topic}
+          title={infoCallToActionSection.title}
+          description={infoCallToActionSection.description}
+        />
+      </main>
     </>
   );
 };

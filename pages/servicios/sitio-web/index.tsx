@@ -1,4 +1,7 @@
 import React from "react";
+import Head from "next/head";
+
+import { Metatags } from "../../../components/metatags";
 
 import {
   FeaturesSection,
@@ -159,30 +162,51 @@ const infoCallToActionSection: ICallToActionSection = {
 const index = () => {
   return (
     <>
-      <IntroductorySection
-        title={infoIntroductorySection.title}
-        description={infoIntroductorySection.description}
-      />
+      <Head>
+        <Metatags
+          title={"Sitio Web | imSoft"}
+          description={
+            "Si quieres que tu negocio tenga éxito en línea, es esencial contar con un sitio web atractivo y funcional. Si quieres que tu negocio tenga presencia en línea y alcance nuevos clientes, no dudes en contactarme y solicitar una cotización. Estoy seguro de que podemos ayudarte a alcanzar tus objetivos y a tener éxito en el mundo digital."
+          }
+          keywords={"Sitio Web, imSoft"}
+          author={"Brandon Uriel García Ramos"}
+          subject={"Sitio Web"}
+          date={"01/01/2023"}
+          type={"Sitio Web"}
+          source={"https://www.imsoft.io/sitio-web"}
+          image={
+            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FSitio%20Web%20imSoft.jpg?alt=media&token=62e43360-f03f-4996-9008-07a5c03b22e8"
+          }
+          url={"https://www.imsoft.io/sitio-web"}
+        />
+      </Head>
 
-      <FeaturesSection
-        topic={infoFeaturesSection.topic}
-        title={infoFeaturesSection.title}
-        description={infoFeaturesSection.description}
-        serviceFeatures={infoFeaturesSection.serviceFeatures}
-      />
+      <main>
+        <IntroductorySection
+          title={infoIntroductorySection.title}
+          description={infoIntroductorySection.description}
+        />
 
-      <PricesSection
-        topic={infoPricesSection.topic}
-        description={infoPricesSection.description}
-        listOfPackages={infoPricesSection.listOfPackages}
-      />
+        <FeaturesSection
+          topic={infoFeaturesSection.topic}
+          title={infoFeaturesSection.title}
+          description={infoFeaturesSection.description}
+          serviceFeatures={infoFeaturesSection.serviceFeatures}
+        />
 
-      <CallToActionSection
-        image={infoCallToActionSection.image}
-        topic={infoCallToActionSection.topic}
-        title={infoCallToActionSection.title}
-        description={infoCallToActionSection.description}
-      />
+        <PricesSection
+          topic={infoPricesSection.topic}
+          description={infoPricesSection.description}
+          listOfPackages={infoPricesSection.listOfPackages}
+        />
+
+        <CallToActionSection
+          image={infoCallToActionSection.image}
+          topic={infoCallToActionSection.topic}
+          title={infoCallToActionSection.title}
+          description={infoCallToActionSection.description}
+        />
+      </main>
     </>
   );
 };

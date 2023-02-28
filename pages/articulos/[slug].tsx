@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getAllFilesMetadata, getFileBySlug, getFiles } from "../../lib/mdx";
 import { MDXRemote } from "next-mdx-remote";
+
+import { getAllFilesMetadata, getFileBySlug, getFiles } from "../../lib/mdx";
+
+import { Metatags } from "../../components/metatags";
+
 import MdxComponent from "../../components/articles/MdxComponent";
 import RecommendationsPosts from "../../components/articles/RecommendationsPosts";
-import { IPost } from '../../interfaces';
+
+import { IPost } from "../../interfaces";
 
 interface Props {
   source: object;
-  frontMatter: object;
+  frontMatter: IPost;
   posts: IPost[];
 }
 
@@ -26,17 +32,34 @@ const Post = ({ source, frontMatter, posts }: Props) => {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl items-center px-4 py-5 sm:px-6 sm:py-4 md:justify-start lg:px-8">
-        <div className="prose prose-lg prose-indigo max-w-screen-lg mx-auto mt-6 text-gray-500">
-          <MDXRemote
-            compiledSource={""}
-            {...source}
-            components={MdxComponent}
-          />
-        </div>
-      </div>
+      <Head>
+        <Metatags
+          title={`${frontMatter.title}`}
+          description={`${frontMatter.description}`}
+          keywords={`${frontMatter.keywords}`}
+          author={`${frontMatter.author}`}
+          subject={`${frontMatter.subtitle}`}
+          date={`${frontMatter.date}`}
+          type={`${frontMatter.category}`}
+          source={`${frontMatter.web}`}
+          image={`${frontMatter.image}`}
+          url={`${frontMatter.canonical_url}`}
+        />
+      </Head>
 
-      <RecommendationsPosts props={randomObjectsResult} />
+      <main>
+        <div className="mx-auto max-w-7xl items-center px-4 py-5 sm:px-6 sm:py-4 md:justify-start lg:px-8">
+          <div className="prose prose-lg prose-indigo max-w-screen-lg mx-auto mt-6 text-gray-500">
+            <MDXRemote
+              compiledSource={""}
+              {...source}
+              components={MdxComponent}
+            />
+          </div>
+        </div>
+
+        <RecommendationsPosts props={randomObjectsResult} />
+      </main>
     </>
   );
 };

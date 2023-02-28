@@ -6,8 +6,6 @@ import Document, {
   NextScript,
 } from "next/document";
 
-import Metatags from "../components/metatags/Metatags";
-
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -20,7 +18,6 @@ class MyDocument extends Document {
         <Head>
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/icons/favicon-imSoft.png" />
-          <Metatags />
         </Head>
         <body>
           <Main />

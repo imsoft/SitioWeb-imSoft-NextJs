@@ -1,14 +1,15 @@
 import React, { ChangeEvent, useState } from "react";
+import Head from "next/head";
 import { useRouter } from "next/navigation";
 
 import { sendEmail } from "../../lib";
 
+import { Metatags } from "../../components/metatags";
+
 import SocialMediaBar from "../../components/ui/shared/SocialMediaBar";
 import ContactInfo from "../../components/ui/shared/ContactInfo";
 
-import {
-  ExclamationCircleIcon,
-} from "@heroicons/react/24/outline";
+import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
 
 const Contacto = () => {
   const router = useRouter();
@@ -77,172 +78,196 @@ const Contacto = () => {
 
   return (
     <>
-      <div className="relative bg-white">
-        <div className="absolute inset-0">
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-primary-500" />
-        </div>
-        <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
-          <div className="bg-primary-500 py-16 px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
-            <div className="mx-auto max-w-lg">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-200 sm:text-3xl">
-                ¡Contáctanos!
-              </h2>
-              <p className="mt-3 text-lg leading-6 text-gray-100">
-                Nuestro equipo de expertos está comprometido con entender tus
-                necesidades y ayudarte a tener éxito a través de soluciones de
-                software eficientes. ¡Contáctanos para obtener más información!
-              </p>
+      <Head>
+        <Metatags
+          title={"Contacto | imSoft"}
+          description={
+            "¿Necesitas contactarnos para resolver una duda, solicitar información o contratar nuestros servicios? ¡No dudes en hacerlo! En nuestro sitio web encontrarás un formulario de contacto diseñado específicamente para que puedas comunicarte con nosotros de manera sencilla y eficaz."
+          }
+          keywords={"Información de contacto, Contacto, imSoft"}
+          author={"Brandon Uriel García Ramos"}
+          subject={"Formulario de contacto"}
+          date={"01/01/2023"}
+          type={"Contacto"}
+          source={"https://www.imsoft.io/contacto"}
+          image={
+            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FLogotipo%20imSoft.png?alt=media&token=4b71448f-4047-402f-8b41-82a6c5e59ec4"
+          }
+          url={"https://www.imsoft.io/contacto"}
+        />
+      </Head>
 
-              <ContactInfo textStyle={"text-gray-100"} />
-
-              <SocialMediaBar iconStyle={"text-gray-100 hover:text-gray-300"} />
-            </div>
+      <main>
+        <div className="relative bg-white">
+          <div className="absolute inset-0">
+            <div className="absolute inset-y-0 left-0 w-1/2 bg-primary-500" />
           </div>
-          <div className="bg-white py-16 px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
-            <div className="mx-auto max-w-lg lg:max-w-none">
-              <form className="grid grid-cols-1 gap-y-6" method="post">
-                <div className="relative mt-1 rounded-md shadow-sm">
-                  <label htmlFor="full-name" className="sr-only">
-                    Nombre Completo
-                  </label>
-                  <input
-                    type="text"
-                    name="full-name"
-                    id="full-name"
-                    autoComplete="name"
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                    placeholder="Nombre Completo"
-                    onChange={onTextFieldChangedName}
-                    onBlur={() => setTouchedName(true)}
-                  />
+          <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
+            <div className="bg-primary-500 py-16 px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+              <div className="mx-auto max-w-lg">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-200 sm:text-3xl">
+                  ¡Contáctanos!
+                </h2>
+                <p className="mt-3 text-lg leading-6 text-gray-100">
+                  Nuestro equipo de expertos está comprometido con entender tus
+                  necesidades y ayudarte a tener éxito a través de soluciones de
+                  software eficientes. ¡Contáctanos para obtener más
+                  información!
+                </p>
+
+                <ContactInfo textStyle={"text-gray-100"} />
+
+                <SocialMediaBar
+                  iconStyle={"text-gray-100 hover:text-gray-300"}
+                />
+              </div>
+            </div>
+            <div className="bg-white py-16 px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+              <div className="mx-auto max-w-lg lg:max-w-none">
+                <form className="grid grid-cols-1 gap-y-6" method="post">
+                  <div className="relative mt-1 rounded-md shadow-sm">
+                    <label htmlFor="full-name" className="sr-only">
+                      Nombre Completo
+                    </label>
+                    <input
+                      type="text"
+                      name="full-name"
+                      id="full-name"
+                      autoComplete="name"
+                      className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                      placeholder="Nombre Completo"
+                      onChange={onTextFieldChangedName}
+                      onBlur={() => setTouchedName(true)}
+                    />
+                    {!inputName && touchedName && (
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <ExclamationCircleIcon
+                          className="h-5 w-5 text-red-500"
+                          aria-hidden="true"
+                        />
+                      </div>
+                    )}
+                  </div>
                   {!inputName && touchedName && (
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                      <ExclamationCircleIcon
-                        className="h-5 w-5 text-red-500"
-                        aria-hidden="true"
-                      />
-                    </div>
+                    <p
+                      className="-mt-4 ml-4 text-sm text-red-600"
+                      id="email-error"
+                    >
+                      No nos escribiste tu nombre 👆
+                    </p>
                   )}
-                </div>
-                {!inputName && touchedName && (
-                  <p
-                    className="-mt-4 ml-4 text-sm text-red-600"
-                    id="email-error"
-                  >
-                    No nos escribiste tu nombre 👆
-                  </p>
-                )}
 
-                <div className="relative mt-1 rounded-md shadow-sm">
-                  <label htmlFor="email" className="sr-only">
-                    Correo Electrónico
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                    placeholder="Correo Electrónico"
-                    onChange={onTextFieldChangedEMail}
-                    onBlur={() => setTouchedEMail(true)}
-                  />
+                  <div className="relative mt-1 rounded-md shadow-sm">
+                    <label htmlFor="email" className="sr-only">
+                      Correo Electrónico
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                      placeholder="Correo Electrónico"
+                      onChange={onTextFieldChangedEMail}
+                      onBlur={() => setTouchedEMail(true)}
+                    />
+                    {!inputEMail && touchedEMail && (
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <ExclamationCircleIcon
+                          className="h-5 w-5 text-red-500"
+                          aria-hidden="true"
+                        />
+                      </div>
+                    )}
+                  </div>
                   {!inputEMail && touchedEMail && (
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                      <ExclamationCircleIcon
-                        className="h-5 w-5 text-red-500"
-                        aria-hidden="true"
-                      />
-                    </div>
+                    <p
+                      className="-mt-4 ml-4 text-sm text-red-600"
+                      id="email-error"
+                    >
+                      No nos escribiste tu correo electrónico 👆
+                    </p>
                   )}
-                </div>
-                {!inputEMail && touchedEMail && (
-                  <p
-                    className="-mt-4 ml-4 text-sm text-red-600"
-                    id="email-error"
-                  >
-                    No nos escribiste tu correo electrónico 👆
-                  </p>
-                )}
 
-                <div className="relative mt-1 rounded-md shadow-sm">
-                  <label htmlFor="phone" className="sr-only">
-                    Número teléfonico
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    autoComplete="tel"
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                    placeholder="Número teléfonico"
-                    onChange={onTextFieldChangedPhoneNumber}
-                    onBlur={() => setTouchedPhoneNumber(true)}
-                  />
+                  <div className="relative mt-1 rounded-md shadow-sm">
+                    <label htmlFor="phone" className="sr-only">
+                      Número teléfonico
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      autoComplete="tel"
+                      className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                      placeholder="Número teléfonico"
+                      onChange={onTextFieldChangedPhoneNumber}
+                      onBlur={() => setTouchedPhoneNumber(true)}
+                    />
+                    {!inputPhoneNumber && touchedPhoneNumber && (
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <ExclamationCircleIcon
+                          className="h-5 w-5 text-red-500"
+                          aria-hidden="true"
+                        />
+                      </div>
+                    )}
+                  </div>
                   {!inputPhoneNumber && touchedPhoneNumber && (
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                      <ExclamationCircleIcon
-                        className="h-5 w-5 text-red-500"
-                        aria-hidden="true"
-                      />
-                    </div>
+                    <p
+                      className="-mt-4 ml-4 text-sm text-red-600"
+                      id="email-error"
+                    >
+                      No nos escribiste tu número teléfonico 👆
+                    </p>
                   )}
-                </div>
-                {!inputPhoneNumber && touchedPhoneNumber && (
-                  <p
-                    className="-mt-4 ml-4 text-sm text-red-600"
-                    id="email-error"
-                  >
-                    No nos escribiste tu número teléfonico 👆
-                  </p>
-                )}
 
-                <div className="relative mt-1 rounded-md shadow-sm">
-                  <label htmlFor="message" className="sr-only">
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
-                    placeholder="Mensaje"
-                    defaultValue={""}
-                    onChange={onTextFieldChangedMessage}
-                    onBlur={() => setTouchedMessage(true)}
-                  />
+                  <div className="relative mt-1 rounded-md shadow-sm">
+                    <label htmlFor="message" className="sr-only">
+                      Mensaje
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                      placeholder="Mensaje"
+                      defaultValue={""}
+                      onChange={onTextFieldChangedMessage}
+                      onBlur={() => setTouchedMessage(true)}
+                    />
+                    {!inputMessage && touchedMessage && (
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <ExclamationCircleIcon
+                          className="h-5 w-5 text-red-500"
+                          aria-hidden="true"
+                        />
+                      </div>
+                    )}
+                  </div>
                   {!inputMessage && touchedMessage && (
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                      <ExclamationCircleIcon
-                        className="h-5 w-5 text-red-500"
-                        aria-hidden="true"
-                      />
-                    </div>
+                    <p
+                      className="-mt-4 ml-4 text-sm text-red-600"
+                      id="email-error"
+                    >
+                      No nos escribiste tu mensaje 👆
+                    </p>
                   )}
-                </div>
-                {!inputMessage && touchedMessage && (
-                  <p
-                    className="-mt-4 ml-4 text-sm text-red-600"
-                    id="email-error"
-                  >
-                    No nos escribiste tu mensaje 👆
-                  </p>
-                )}
 
-                <div>
-                  <button
-                    type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-primary-500 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-                    onClick={onSend}
-                  >
-                    Enviar
-                  </button>
-                </div>
-              </form>
+                  <div>
+                    <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-primary-500 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                      onClick={onSend}
+                    >
+                      Enviar
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

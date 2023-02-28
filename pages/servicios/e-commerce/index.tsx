@@ -1,4 +1,7 @@
 import React from "react";
+import Head from "next/head";
+
+import { Metatags } from "../../../components/metatags";
 
 import {
   FeaturesSection,
@@ -156,30 +159,51 @@ const infoCallToActionSection: ICallToActionSection = {
 const index = () => {
   return (
     <>
-      <IntroductorySection
-        title={infoIntroductorySection.title}
-        description={infoIntroductorySection.description}
-      />
+      <Head>
+        <Metatags
+          title={"E-Commerce | imSoft"}
+          description={
+            "Si estás buscando expandir tu negocio y llevar tus productos o servicios a una audiencia más amplia, una tienda en línea es una excelente opción. Si estás listo para llevar tu negocio al siguiente nivel, no dudes en contactarme y solicitar una cotización. Estoy seguro de que podemos ayudarte a alcanzar tus objetivos y a tener éxito en el mundo del e-commerce."
+          }
+          keywords={"Tienda en linea, E-Commerce, imSoft"}
+          author={"Brandon Uriel García Ramos"}
+          subject={"E-Commerce"}
+          date={"01/01/2023"}
+          type={"E-Commerce"}
+          source={"https://www.imsoft.io/e-commerce"}
+          image={
+            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FTienda%20en%20linea%20imSoft.jpg?alt=media&token=e712fe2d-418b-4915-87de-f6906f79b588"
+          }
+          url={"https://www.imsoft.io/e-commerce"}
+        />
+      </Head>
 
-      <FeaturesSection
-        topic={infoFeaturesSection.topic}
-        title={infoFeaturesSection.title}
-        description={infoFeaturesSection.description}
-        serviceFeatures={infoFeaturesSection.serviceFeatures}
-      />
+      <main>
+        <IntroductorySection
+          title={infoIntroductorySection.title}
+          description={infoIntroductorySection.description}
+        />
 
-      <PricesSection
-        topic={infoPricesSection.topic}
-        description={infoPricesSection.description}
-        listOfPackages={infoPricesSection.listOfPackages}
-      />
+        <FeaturesSection
+          topic={infoFeaturesSection.topic}
+          title={infoFeaturesSection.title}
+          description={infoFeaturesSection.description}
+          serviceFeatures={infoFeaturesSection.serviceFeatures}
+        />
 
-      <CallToActionSection
-        image={infoCallToActionSection.image}
-        topic={infoCallToActionSection.topic}
-        title={infoCallToActionSection.title}
-        description={infoCallToActionSection.description}
-      />
+        <PricesSection
+          topic={infoPricesSection.topic}
+          description={infoPricesSection.description}
+          listOfPackages={infoPricesSection.listOfPackages}
+        />
+
+        <CallToActionSection
+          image={infoCallToActionSection.image}
+          topic={infoCallToActionSection.topic}
+          title={infoCallToActionSection.title}
+          description={infoCallToActionSection.description}
+        />
+      </main>
     </>
   );
 };

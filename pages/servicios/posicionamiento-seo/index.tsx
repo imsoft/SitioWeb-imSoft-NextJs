@@ -1,4 +1,7 @@
 import React from "react";
+import Head from "next/head";
+
+import { Metatags } from "../../../components/metatags";
 
 import {
   FeaturesSection,
@@ -107,30 +110,51 @@ const infoCallToActionSection: ICallToActionSection = {
 const index = () => {
   return (
     <>
-      <IntroductorySection
-        title={infoIntroductorySection.title}
-        description={infoIntroductorySection.description}
-      />
+      <Head>
+        <Metatags
+          title={"Posicionamiento SEO | imSoft"}
+          description={
+            "Si quieres que tu negocio tenga éxito en línea, es esencial que tenga una buena presencia en los resultados de búsqueda de Google. El posicionamiento SEO no es algo que se logre de la noche a la mañana, sino que requiere de una estrategia bien planificada y de técnicas especializadas. Es aquí donde entran mis servicios de desarrollo de posicionamiento SEO. Si quieres que tu negocio alcance nuevos clientes y aumente sus ventas en línea, no dudes en contactarme y solicitar una cotización. Estoy seguro de que podemos ayudarte a alcanzar tus objetivos y a tener éxito en el mundo digital."
+          }
+          keywords={"Posicionamiento SEO, imSoft"}
+          author={"Brandon Uriel García Ramos"}
+          subject={"Posicionamiento SEO"}
+          date={"01/01/2023"}
+          type={"Posicionamiento SEO"}
+          source={"https://www.imsoft.io/posicionamiento-seo"}
+          image={
+            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FPosicionamiento%20SEO%20imSoft.jpg?alt=media&token=7b9ea347-50a6-478b-b629-9c67f1f32222"
+          }
+          url={"https://www.imsoft.io/posicionamiento-seo"}
+        />
+      </Head>
 
-      <FeaturesSection
-        topic={infoFeaturesSection.topic}
-        title={infoFeaturesSection.title}
-        description={infoFeaturesSection.description}
-        serviceFeatures={infoFeaturesSection.serviceFeatures}
-      />
+      <main>
+        <IntroductorySection
+          title={infoIntroductorySection.title}
+          description={infoIntroductorySection.description}
+        />
 
-      <MonthlyPaymentSection
-        topic={infoPricesSection.topic}
-        description={infoPricesSection.description}
-        listOfPackages={infoPricesSection.listOfPackages}
-      />
+        <FeaturesSection
+          topic={infoFeaturesSection.topic}
+          title={infoFeaturesSection.title}
+          description={infoFeaturesSection.description}
+          serviceFeatures={infoFeaturesSection.serviceFeatures}
+        />
 
-      <CallToActionSection
-        image={infoCallToActionSection.image}
-        topic={infoCallToActionSection.topic}
-        title={infoCallToActionSection.title}
-        description={infoCallToActionSection.description}
-      />
+        <MonthlyPaymentSection
+          topic={infoPricesSection.topic}
+          description={infoPricesSection.description}
+          listOfPackages={infoPricesSection.listOfPackages}
+        />
+
+        <CallToActionSection
+          image={infoCallToActionSection.image}
+          topic={infoCallToActionSection.topic}
+          title={infoCallToActionSection.title}
+          description={infoCallToActionSection.description}
+        />
+      </main>
     </>
   );
 };

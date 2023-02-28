@@ -1,4 +1,7 @@
 import React from "react";
+import Head from "next/head";
+
+import { Metatags } from "../../components/metatags";
 
 import { PortfolioCard } from "../../components/ui/portfolio";
 
@@ -98,39 +101,60 @@ const portfolio: IPortfolioCard[] = [
 const portafolio = () => {
   return (
     <>
-      <div className="bg-white">
-        <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
-          <div className="space-y-12">
-            <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-              <h2 className="text-3xl font-bold tracking-tight text-primary-500 sm:text-4xl">
-                Nuestros Trabajos
-              </h2>
-              <p className="text-xl text-gray-500">
-                Bienvenidos a nuestro portafolio de trabajos. Aquí podrán
-                encontrar una muestra de nuestros proyectos más recientes y
-                destacados en el campo del desarrollo de software. Cada uno de
-                estos proyectos ha sido realizado con dedicación y atención a
-                los detalles.
-              </p>
+      <Head>
+        <Metatags
+          title={"Portafolio de trabajo | imSoft"}
+          description={
+            "Si estás buscando un profesional con experiencia y habilidades comprobadas, te invito a que visites mi portafolio de trabajo y descubras por ti mismo/a todo lo que puedo ofrecerte. Estoy seguro de que encontrarás trabajos que te sorprenderán y te mostrarán el valor que puedo aportar a tu proyecto."
+          }
+          keywords={"Portafolio, imSoft"}
+          author={"Brandon Uriel García Ramos"}
+          subject={"Portafolio"}
+          date={"01/01/2023"}
+          type={"Portafolio"}
+          source={"https://www.imsoft.io/portafolio"}
+          image={
+            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Fotos%20imSoft%2Fnosotros-imSoft.jpg?alt=media&token=562d50ef-cf49-4a19-adc6-6e0e7228a2d0"
+          }
+          url={"https://www.imsoft.io/portafolio"}
+        />
+      </Head>
+
+      <main>
+        <div className="bg-white">
+          <div className="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
+            <div className="space-y-12">
+              <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+                <h2 className="text-3xl font-bold tracking-tight text-primary-500 sm:text-4xl">
+                  Nuestros Trabajos
+                </h2>
+                <p className="text-xl text-gray-500">
+                  Bienvenidos a nuestro portafolio de trabajos. Aquí podrán
+                  encontrar una muestra de nuestros proyectos más recientes y
+                  destacados en el campo del desarrollo de software. Cada uno de
+                  estos proyectos ha sido realizado con dedicación y atención a
+                  los detalles.
+                </p>
+              </div>
+              <ul
+                role="list"
+                className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
+              >
+                {portfolio.map((portfolio) => (
+                  <PortfolioCard
+                    key={portfolio.alt}
+                    name={portfolio.name}
+                    type={portfolio.type}
+                    href={portfolio.href}
+                    alt={portfolio.alt}
+                    imageUrl={portfolio.imageUrl}
+                  />
+                ))}
+              </ul>
             </div>
-            <ul
-              role="list"
-              className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
-            >
-              {portfolio.map((portfolio) => (
-                <PortfolioCard
-                  key={portfolio.alt}
-                  name={portfolio.name}
-                  type={portfolio.type}
-                  href={portfolio.href}
-                  alt={portfolio.alt}
-                  imageUrl={portfolio.imageUrl}
-                />
-              ))}
-            </ul>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };
