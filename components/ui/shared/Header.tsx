@@ -164,12 +164,18 @@ export const Header = () => {
                 alt="imSoft"
                 height={500}
                 width={500}
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               />
             </Link>
           </div>
           <div className="flex-1" />
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button onClick={handleShowingResponsiveMenu} className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+            <Popover.Button
+              onClick={handleShowingResponsiveMenu}
+              className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+            >
               <span className="sr-only">Abrir Menu imSoft</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -475,7 +481,10 @@ export const Header = () => {
                   </Link>
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button onClick={handleShowingResponsiveMenu} className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+                  <Popover.Button
+                    onClick={handleShowingResponsiveMenu}
+                    className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+                  >
                     <span className="sr-only">Cerrar menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
