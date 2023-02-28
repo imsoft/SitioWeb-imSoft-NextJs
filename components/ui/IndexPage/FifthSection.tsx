@@ -39,7 +39,6 @@ export const FifthSection = () => {
               className="h-full w-full object-cover object-center lg:h-full lg:w-full"
               width={5760}
               height={3840}
-              priority
             />
           </div>
 
