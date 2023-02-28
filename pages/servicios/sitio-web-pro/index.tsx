@@ -159,6 +159,7 @@ const index = () => {
   return (
     <>
       <Head>
+        <title>Sitio Web Pro | imSoft</title>
         <Metatags
           title={"Sitio Web Pro | imSoft"}
           description={

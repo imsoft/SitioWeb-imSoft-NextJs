@@ -8,6 +8,7 @@ const nosotros = () => {
   return (
     <>
       <Head>
+        <title>Nosotros | imSoft</title>
         <Metatags
           title={"Nosotros | imSoft"}
           description={

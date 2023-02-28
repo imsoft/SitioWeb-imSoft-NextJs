@@ -1,6 +1,9 @@
 import React from "react";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Metatags } from "../../components/metatags";
 
 const collections = [
   {
@@ -57,8 +60,27 @@ const collections = [
 const index = () => {
   return (
     <>
-      {/* Collections */}
-      <section aria-labelledby="collections-heading" className="">
+      <Head>
+        <title>Servicios | imSoft</title>
+        <Metatags
+          title={"Servicios | imSoft"}
+          description={
+            "Diseñamos y desarrollamos sitios web que se adaptan a tus necesidades y a las de tu audiencia, y que reflejan la esencia de tu negocio. Además, utilizamos tecnología de vanguardia para garantizar que tu sitio web sea atractivo, responsivo y fácil de usar. Si quieres que tu negocio tenga presencia en línea y alcance nuevos clientes, no dudes en contactarme y solicitar una cotización. Con mi experiencia y conocimientos en el campo del desarrollo web, estoy seguro de que podemos ayudarte a alcanzar tus objetivos y a tener éxito en el mundo digital."
+          }
+          keywords={"Servicios, imSoft, Sitio Web, Sitios web, Pagina Web, Paginas Web, ecommerce, tienda en linea, Posicionamiento SEO"}
+          author={"Brandon Uriel García Ramos"}
+          subject={"Servicios"}
+          date={"01/01/2023"}
+          type={"Servicios"}
+          source={"https://www.imsoft.io/servicios"}
+          image={
+            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FLogotipo%20imSoft.png?alt=media&token=4b71448f-4047-402f-8b41-82a6c5e59ec4"
+          }
+          url={"https://www.imsoft.io/servicios"}
+        />
+      </Head>
+
+      <main>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-12">
             <h2
@@ -94,7 +116,7 @@ const index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </main>
     </>
   );
 };

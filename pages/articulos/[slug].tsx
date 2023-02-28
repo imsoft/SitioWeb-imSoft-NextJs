@@ -33,6 +33,7 @@ const Post = ({ source, frontMatter, posts }: Props) => {
   return (
     <>
       <Head>
+        <title>{`${frontMatter.title}`} | imSoft</title>
         <Metatags
           title={`${frontMatter.title}`}
           description={`${frontMatter.description}`}

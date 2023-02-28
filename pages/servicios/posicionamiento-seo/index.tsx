@@ -111,6 +111,7 @@ const index = () => {
   return (
     <>
       <Head>
+        <title>Posicionamiento SEO | imSoft</title>
         <Metatags
           title={"Posicionamiento SEO | imSoft"}
           description={

@@ -17,6 +17,7 @@ const MensajeDeConfirmacion = () => {
   return (
     <>
       <Head>
+        <title>Mensaje de confirmación | imSoft</title>
         <Metatags
           title={"Mensaje de confirmación | imSoft"}
           description={"Mensaje de confirmación"}

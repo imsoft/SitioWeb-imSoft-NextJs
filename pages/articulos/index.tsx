@@ -17,6 +17,7 @@ export const index: NextPage<Props> = (props) => {
   return (
     <>
       <Head>
+        <title>Artículos | imSoft</title>
         <Metatags
           title={"Artículos | imSoft"}
           description={

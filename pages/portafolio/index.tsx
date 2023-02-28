@@ -102,6 +102,7 @@ const portafolio = () => {
   return (
     <>
       <Head>
+        <title>Portafolio de trabajo | imSoft</title>
         <Metatags
           title={"Portafolio de trabajo | imSoft"}
           description={

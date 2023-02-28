@@ -32,7 +32,10 @@ export const Metatags = ({
       <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
 
       {/* Título de la página. Longitud aproximada de 65 caracteres */}
-      <title>{`${title}`}</title>
+      
+      {/* <title>{`${title}`}</title> */}
+      <title>{title}</title>
+
       <meta name="Title" content={`${title}`} />
       <meta httpEquiv="title" content={`${title}`} />
 

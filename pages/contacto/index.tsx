@@ -79,6 +79,7 @@ const Contacto = () => {
   return (
     <>
       <Head>
+        <title>Contacto | imSoft</title>
         <Metatags
           title={"Contacto | imSoft"}
           description={

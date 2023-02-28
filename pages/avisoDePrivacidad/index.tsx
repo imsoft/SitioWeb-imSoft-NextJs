@@ -7,6 +7,7 @@ const avisoDePrivacidad = () => {
   return (
     <>
       <Head>
+        <title>Aviso de privacidad | imSoft</title>
         <Metatags
           title={"Aviso de privacidad | imSoft"}
           description={

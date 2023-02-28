@@ -16,6 +16,7 @@ const ErrorPage = () => {
   return (
     <>
       <Head>
+      <title>Esta página no existe | imSoft</title>
         <Metatags
           title={"Esta página no existe | imSoft"}
           description={

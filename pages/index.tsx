@@ -14,6 +14,7 @@ const index = () => {
   return (
     <>
       <Head>
+        <title>imSoft</title>
         <Metatags
           title={"imSoft"}
           description={

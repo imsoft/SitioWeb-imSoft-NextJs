@@ -17,6 +17,7 @@ const MensajeDeError = () => {
   return (
     <>
       <Head>
+        <title>Mensaje de error | imSoft</title>
         <Metatags
           title={"Mensaje de error | imSoft"}
           description={"Mensaje de error"}
