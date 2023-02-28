@@ -49,7 +49,6 @@ export const ThirdSection = () => {
             alt="Diseñamos sitios web para aumentar las ventas - imSoft"
             width={5760}
             height={3840}
-            priority
           />
         </div>
       </div>
