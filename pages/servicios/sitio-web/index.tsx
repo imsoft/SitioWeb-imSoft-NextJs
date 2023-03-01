@@ -26,13 +26,13 @@ import {
 } from "@heroicons/react/24/outline";
 
 const index = () => {
-  const infoIntroductorySection: IIntroductorySection = {
+  const introductorySectionInfo: IIntroductorySection = {
     title: "Sitio Web",
     description:
       "Ya disté el primer paso, permítenos acompañarte a dar el siguiente",
   };
 
-  const infoFeaturesSection: IFeaturesSection = {
+  const featuresSectionInfo: IFeaturesSection = {
     topic: "Sitio Web",
     title: "Caracteristicas del servicio",
     description:
@@ -77,7 +77,7 @@ const index = () => {
     ],
   };
 
-  const infoPricesSection: IPricesSection = {
+  const pricesSectionInfo: IPricesSection = {
     topic: "Sitio Web",
     description:
       "Hacemos que tu negocio tenga presencia en línea con nuestros sitios web",
@@ -149,7 +149,7 @@ const index = () => {
     ],
   };
 
-  const infoCallToActionSection: ICallToActionSection = {
+  const callToActionSectionInfo: ICallToActionSection = {
     image:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FSitio%20Web%20imSoft.jpg?alt=media&token=62e43360-f03f-4996-9008-07a5c03b22e8",
     topic: "Sitio Web",
@@ -230,28 +230,28 @@ const index = () => {
 
       <main>
         <IntroductorySection
-          title={infoIntroductorySection.title}
-          description={infoIntroductorySection.description}
+          title={introductorySectionInfo.title}
+          description={introductorySectionInfo.description}
         />
 
         <FeaturesSection
-          topic={infoFeaturesSection.topic}
-          title={infoFeaturesSection.title}
-          description={infoFeaturesSection.description}
-          serviceFeatures={infoFeaturesSection.serviceFeatures}
+          topic={featuresSectionInfo.topic}
+          title={featuresSectionInfo.title}
+          description={featuresSectionInfo.description}
+          serviceFeatures={featuresSectionInfo.serviceFeatures}
         />
 
         <PricesSection
-          topic={infoPricesSection.topic}
-          description={infoPricesSection.description}
-          listOfPackages={infoPricesSection.listOfPackages}
+          topic={pricesSectionInfo.topic}
+          description={pricesSectionInfo.description}
+          listOfPackages={pricesSectionInfo.listOfPackages}
         />
 
         <CallToActionSection
-          image={infoCallToActionSection.image}
-          topic={infoCallToActionSection.topic}
-          title={infoCallToActionSection.title}
-          description={infoCallToActionSection.description}
+          image={callToActionSectionInfo.image}
+          topic={callToActionSectionInfo.topic}
+          title={callToActionSectionInfo.title}
+          description={callToActionSectionInfo.description}
         />
       </main>
     </>

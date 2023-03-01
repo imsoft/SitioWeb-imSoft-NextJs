@@ -26,13 +26,13 @@ import {
 } from "@heroicons/react/24/outline";
 
 const index = () => {
-  const infoIntroductorySection: IIntroductorySection = {
+  const introductorySectionInfo: IIntroductorySection = {
     title: "Consultoría de Sitio Web",
     description:
       "Nuestro enfoque en la calidad y la eficiencia en el desarrollo de software nos permite brindar soluciones excepcionales a nuestros clientes",
   };
 
-  const infoFeaturesSection: IFeaturesSection = {
+  const featuresSectionInfo: IFeaturesSection = {
     topic: "Consultoría de sitio web",
     title: "Caracteristicas del servicio",
     description:
@@ -77,7 +77,7 @@ const index = () => {
     ],
   };
 
-  const infoPricesSection: IPricesSection = {
+  const pricesSectionInfo: IPricesSection = {
     topic: "Consultoría de sitio web",
     description:
       "Diseñamos y desarrollamos soluciones de software que impulsan el crecimiento de su empresa",
@@ -98,7 +98,7 @@ const index = () => {
     ],
   };
 
-  const infoCallToActionSection: ICallToActionSection = {
+  const callToActionSectionInfo: ICallToActionSection = {
     image:
       "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Servicios%2FConsultoria%20imSoft.jpg.jpg?alt=media&token=ee427b3a-06b4-40e0-abb6-ad79f0f3b31f",
     topic: "Consultoría de sitio web",
@@ -178,28 +178,28 @@ const index = () => {
 
       <main>
         <IntroductorySection
-          title={infoIntroductorySection.title}
-          description={infoIntroductorySection.description}
+          title={introductorySectionInfo.title}
+          description={introductorySectionInfo.description}
         />
 
         <FeaturesSection
-          topic={infoFeaturesSection.topic}
-          title={infoFeaturesSection.title}
-          description={infoFeaturesSection.description}
-          serviceFeatures={infoFeaturesSection.serviceFeatures}
+          topic={featuresSectionInfo.topic}
+          title={featuresSectionInfo.title}
+          description={featuresSectionInfo.description}
+          serviceFeatures={featuresSectionInfo.serviceFeatures}
         />
 
         <MonthlyPaymentSection
-          topic={infoPricesSection.topic}
-          description={infoPricesSection.description}
-          listOfPackages={infoPricesSection.listOfPackages}
+          topic={pricesSectionInfo.topic}
+          description={pricesSectionInfo.description}
+          listOfPackages={pricesSectionInfo.listOfPackages}
         />
 
         <CallToActionSection
-          image={infoCallToActionSection.image}
-          topic={infoCallToActionSection.topic}
-          title={infoCallToActionSection.title}
-          description={infoCallToActionSection.description}
+          image={callToActionSectionInfo.image}
+          topic={callToActionSectionInfo.topic}
+          title={callToActionSectionInfo.title}
+          description={callToActionSectionInfo.description}
         />
       </main>
     </>

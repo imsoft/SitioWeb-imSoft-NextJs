@@ -7,7 +7,7 @@ import { IMetatags, INotificationMessage } from "../interfaces";
 
 
 const ErrorPage = () => {
-  const infoNotificationMessage: INotificationMessage = {
+  const notificationMessageInfo: INotificationMessage = {
     topic: "404",
     message: "Esta página no existe",
     comment: "¡Ups! Parece que has llegado a una página que no existe.",
@@ -83,9 +83,9 @@ const ErrorPage = () => {
 
       <main>
         <MessageComponent
-          topic={infoNotificationMessage.topic}
-          message={infoNotificationMessage.message}
-          comment={infoNotificationMessage.comment}
+          topic={notificationMessageInfo.topic}
+          message={notificationMessageInfo.message}
+          comment={notificationMessageInfo.comment}
         />
       </main>
     </>

@@ -7,7 +7,7 @@ import { IMetatags, INotificationMessage } from "../../interfaces";
 
 
 const MensajeDeError = () => {
-  const infoNotificationMessage: INotificationMessage = {
+  const notificationMessageInfo: INotificationMessage = {
     topic: "Hubo un error al enviar un mensaje",
     message: "Perdón por las molestias",
     comment: "Te recomendamos volver a mandar el mensaje",
@@ -83,9 +83,9 @@ const MensajeDeError = () => {
 
       <main>
         <MessageComponent
-          topic={infoNotificationMessage.topic}
-          message={infoNotificationMessage.message}
-          comment={infoNotificationMessage.comment}
+          topic={notificationMessageInfo.topic}
+          message={notificationMessageInfo.message}
+          comment={notificationMessageInfo.comment}
         />
       </main>
     </>

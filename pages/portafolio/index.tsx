@@ -6,7 +6,7 @@ import { PortfolioCard } from "../../components/ui/portfolio";
 import { IMetatags, IPortfolioCard } from "../../interfaces";
 
 const portafolio = () => {
-  const portfolio: IPortfolioCard[] = [
+  const portfolioInfo: IPortfolioCard[] = [
     {
       name: "Club De Estirpe",
       type: "Sitio Web 👨‍💻",
@@ -186,7 +186,7 @@ const portafolio = () => {
                 role="list"
                 className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
               >
-                {portfolio.map((portfolio) => (
+                {portfolioInfo.map((portfolio) => (
                   <PortfolioCard
                     key={portfolio.alt}
                     name={portfolio.name}

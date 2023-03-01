@@ -6,7 +6,7 @@ import MessageComponent from "../../components/ui/shared/MessageComponent";
 import { IMetatags, INotificationMessage } from "../../interfaces";
 
 const MensajeDeConfirmacion = () => {
-  const infoNotificationMessage: INotificationMessage = {
+  const notificationMessageInfo: INotificationMessage = {
     topic: "Muchas gracias por tu mensaje",
     message: "¡Envío exitoso!",
     comment: "Te responderemos a la brevedad",
@@ -82,9 +82,9 @@ const MensajeDeConfirmacion = () => {
 
       <main>
         <MessageComponent
-          topic={infoNotificationMessage.topic}
-          message={infoNotificationMessage.message}
-          comment={infoNotificationMessage.comment}
+          topic={notificationMessageInfo.topic}
+          message={notificationMessageInfo.message}
+          comment={notificationMessageInfo.comment}
         />
       </main>
     </>
