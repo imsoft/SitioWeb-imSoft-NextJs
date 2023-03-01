@@ -32,9 +32,9 @@ const Post = ({ source, frontMatter, posts }: Props) => {
     <>
       <Head>
         {/* MetaEtiquetas Básicas */}
-        <title>{frontMatter.title}</title>
-        <meta name="title" content={frontMatter.title} />
-        <meta httpEquiv="title" content={frontMatter.title} />
+        <title>{frontMatter.title} | imSoft</title>
+        <meta name="title" content={`${frontMatter.title} | imSoft`} />
+        <meta httpEquiv="title" content={`${frontMatter.title} | imSoft`} />
         <meta name="description" lang="es" content={frontMatter.description} />
         <meta name="keywords" lang="es" content={frontMatter.keywords} />
 
