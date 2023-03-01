@@ -50,6 +50,7 @@ export const ThirdSection = () => {
             width={6500}
             height={3789}
             priority
+            sizes="(min-width: 66em) 33vw, (min-width: 44em) 50vw, 100vw"
           />
         </div>
       </div>
