@@ -1,29 +1,76 @@
 import React from "react";
 import Head from "next/head";
 
-import { Metatags } from "../../components/metatags";
+import { IMetatags } from "../../interfaces";
 
 const avisoDePrivacidad = () => {
+  const metatagsInfo: IMetatags = {
+    title: "Aviso de privacidad | imSoft",
+    description:
+      "imSoft se preocupa por la privacidad de sus clientes y usuarios, por lo que proteger la información personal es una prioridad para nosotros. Este aviso de privacidad explica cómo recopilamos, usamos y protegemos la información personal que se nos proporciona a través de nuestros productos, servicios, sitios web y aplicaciones móviles",
+    keywords: "Aviso de privacidad, imSoft",
+    author: "Brandon Uriel García Ramos",
+    subject: "Aviso de privacidad",
+    date: "01/01/2023",
+    type: "Articulo",
+    source: "https://www.imsoft.io/avisoDePrivacidad",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FLogotipo%20imSoft.png?alt=media&token=4b71448f-4047-402f-8b41-82a6c5e59ec",
+    url: "https://www.imsoft.io/avisoDePrivacidad",
+    robots: "index,follow",
+  };
+
   return (
     <>
       <Head>
-        <title>Aviso de privacidad | imSoft</title>
-        <Metatags
-          title={"Aviso de privacidad | imSoft"}
-          description={
-            "imSoft se preocupa por la privacidad de sus clientes y usuarios, por lo que proteger la información personal es una prioridad para nosotros. Este aviso de privacidad explica cómo recopilamos, usamos y protegemos la información personal que se nos proporciona a través de nuestros productos, servicios, sitios web y aplicaciones móviles."
-          }
-          keywords={"Aviso de privacidad, imSoft"}
-          author={"Brandon Uriel García Ramos"}
-          subject={"Aviso de privacidad"}
-          date={"01/01/2023"}
-          type={"Articulo"}
-          source={"https://www.imsoft.io/avisoDePrivacidad"}
-          image={
-            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Logos%20Empresa%2FLogotipo%20imSoft.png?alt=media&token=4b71448f-4047-402f-8b41-82a6c5e59ec4"
-          }
-          url={"https://www.imsoft.io/avisoDePrivacidad"}
+        {/* MetaEtiquetas Básicas */}
+        <title>{metatagsInfo.title}</title>
+        <meta name="title" content={metatagsInfo.title} />
+        <meta httpEquiv="title" content={metatagsInfo.title} />
+        <meta name="description" lang="es" content={metatagsInfo.description} />
+        <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+
+        {/* Informacion del autor */}
+        <meta name="author" content={metatagsInfo.author} />
+
+        {/* Dublincore */}
+        <meta name="DC.title" lang="es-MX" content={metatagsInfo.title} />
+        <meta name="DC.creator" lang="es-MX" content={metatagsInfo.author} />
+        <meta name="DC.subject" lang="es-MX" content={metatagsInfo.subject} />
+        <meta
+          name="DC.description"
+          lang="es-MX"
+          content={metatagsInfo.description}
         />
+        <meta name="DC.publisher" lang="es-MX" content={metatagsInfo.author} />
+        <meta name="DC.date" lang="es-MX" content={metatagsInfo.date} />
+        <meta name="DC.type" lang="es-MX" content={metatagsInfo.type} />
+        <meta name="DC.identifier" lang="es-MX" content={metatagsInfo.title} />
+        <meta name="DC.source" lang="es-MX" content={metatagsInfo.source} />
+        <meta name="DC.relation" lang="es-MX" content={metatagsInfo.source} />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content={metatagsInfo.title} />
+        <meta name="twitter:description" content={metatagsInfo.description} />
+        <meta name="twitter:image:src" content={metatagsInfo.image} />
+        <meta name="twitter:image:alt" content={metatagsInfo.title} />
+
+        {/* Facebook */}
+        <meta property="og:title" content={metatagsInfo.title} />
+        <meta property="og:type" content={metatagsInfo.type} />
+        <meta
+          property="og:url"
+          content={`https://www.imsoft.io${metatagsInfo.url}`}
+        />
+        <meta property="og:image" content={metatagsInfo.image} />
+        <meta property="og:description" content={metatagsInfo.description} />
+
+        {/* Google + / Pinterest */}
+        <meta itemProp="description" content={metatagsInfo.description} />
+        <meta itemProp="image" content={metatagsInfo.image} />
+
+        {/* Robots */}
+        <meta name="robots" content={metatagsInfo.robots} />
       </Head>
 
       <main>

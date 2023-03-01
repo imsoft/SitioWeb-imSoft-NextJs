@@ -2,29 +2,76 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 
-import { Metatags } from "../../components/metatags";
+import { IMetatags } from "../../interfaces";
 
 const nosotros = () => {
+  const metatagsInfo: IMetatags = {
+    title: "Nosotros | imSoft",
+    description:
+      "¿Buscas una empresa experta en software y tecnología para desarrollar tu próximo proyecto? ¡ImSoft es tu mejor opción! Somos una empresa líder en el mercado, especializada en soluciones de software y tecnología para satisfacer las necesidades de nuestros clientes",
+    keywords: "Nosotros, imSoft",
+    author: "Brandon Uriel García Ramos",
+    subject: "Nosotros",
+    date: "01/01/2023",
+    type: "Nosotros",
+    source: "https://www.imsoft.io/nosotros",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Fotos%20imSoft%2Fnosotros-imSoft.jpg?alt=media&token=562d50ef-cf49-4a19-adc6-6e0e7228a2d",
+    url: "https://www.imsoft.io/nosotros",
+    robots: "index,follow",
+  };
+
   return (
     <>
       <Head>
-        <title>Nosotros | imSoft</title>
-        <Metatags
-          title={"Nosotros | imSoft"}
-          description={
-            "¿Buscas una empresa experta en software y tecnología para desarrollar tu próximo proyecto? ¡ImSoft es tu mejor opción! Somos una empresa líder en el mercado, especializada en soluciones de software y tecnología para satisfacer las necesidades de nuestros clientes."
-          }
-          keywords={"Nosotros, imSoft"}
-          author={"Brandon Uriel García Ramos"}
-          subject={"Nosotros"}
-          date={"01/01/2023"}
-          type={"Nosotros"}
-          source={"https://www.imsoft.io/nosotros"}
-          image={
-            "https://firebasestorage.googleapis.com/v0/b/imsoft-website.appspot.com/o/Fotos%20imSoft%2Fnosotros-imSoft.jpg?alt=media&token=562d50ef-cf49-4a19-adc6-6e0e7228a2d0"
-          }
-          url={"https://www.imsoft.io/nosotros"}
+        {/* MetaEtiquetas Básicas */}
+        <title>{metatagsInfo.title}</title>
+        <meta name="title" content={metatagsInfo.title} />
+        <meta httpEquiv="title" content={metatagsInfo.title} />
+        <meta name="description" lang="es" content={metatagsInfo.description} />
+        <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+
+        {/* Informacion del autor */}
+        <meta name="author" content={metatagsInfo.author} />
+
+        {/* Dublincore */}
+        <meta name="DC.title" lang="es-MX" content={metatagsInfo.title} />
+        <meta name="DC.creator" lang="es-MX" content={metatagsInfo.author} />
+        <meta name="DC.subject" lang="es-MX" content={metatagsInfo.subject} />
+        <meta
+          name="DC.description"
+          lang="es-MX"
+          content={metatagsInfo.description}
         />
+        <meta name="DC.publisher" lang="es-MX" content={metatagsInfo.author} />
+        <meta name="DC.date" lang="es-MX" content={metatagsInfo.date} />
+        <meta name="DC.type" lang="es-MX" content={metatagsInfo.type} />
+        <meta name="DC.identifier" lang="es-MX" content={metatagsInfo.title} />
+        <meta name="DC.source" lang="es-MX" content={metatagsInfo.source} />
+        <meta name="DC.relation" lang="es-MX" content={metatagsInfo.source} />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content={metatagsInfo.title} />
+        <meta name="twitter:description" content={metatagsInfo.description} />
+        <meta name="twitter:image:src" content={metatagsInfo.image} />
+        <meta name="twitter:image:alt" content={metatagsInfo.title} />
+
+        {/* Facebook */}
+        <meta property="og:title" content={metatagsInfo.title} />
+        <meta property="og:type" content={metatagsInfo.type} />
+        <meta
+          property="og:url"
+          content={`https://www.imsoft.io${metatagsInfo.url}`}
+        />
+        <meta property="og:image" content={metatagsInfo.image} />
+        <meta property="og:description" content={metatagsInfo.description} />
+
+        {/* Google + / Pinterest */}
+        <meta itemProp="description" content={metatagsInfo.description} />
+        <meta itemProp="image" content={metatagsInfo.image} />
+
+        {/* Robots */}
+        <meta name="robots" content={metatagsInfo.robots} />
       </Head>
 
       <main>

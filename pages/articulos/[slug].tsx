@@ -5,8 +5,6 @@ import { MDXRemote } from "next-mdx-remote";
 
 import { getAllFilesMetadata, getFileBySlug, getFiles } from "../../lib/mdx";
 
-import { Metatags } from "../../components/metatags";
-
 import MdxComponent from "../../components/articles/MdxComponent";
 import RecommendationsPosts from "../../components/articles/RecommendationsPosts";
 
@@ -33,19 +31,54 @@ const Post = ({ source, frontMatter, posts }: Props) => {
   return (
     <>
       <Head>
-        <title>{`${frontMatter.title}`} | imSoft</title>
-        <Metatags
-          title={`${frontMatter.title}`}
-          description={`${frontMatter.description}`}
-          keywords={`${frontMatter.keywords}`}
-          author={`${frontMatter.author}`}
-          subject={`${frontMatter.subtitle}`}
-          date={`${frontMatter.date}`}
-          type={`${frontMatter.category}`}
-          source={`${frontMatter.web}`}
-          image={`${frontMatter.image}`}
-          url={`${frontMatter.canonical_url}`}
+        {/* MetaEtiquetas Básicas */}
+        <title>{frontMatter.title}</title>
+        <meta name="title" content={frontMatter.title} />
+        <meta httpEquiv="title" content={frontMatter.title} />
+        <meta name="description" lang="es" content={frontMatter.description} />
+        <meta name="keywords" lang="es" content={frontMatter.keywords} />
+
+        {/* Informacion del autor */}
+        <meta name="author" content={frontMatter.author} />
+
+        {/* Dublincore */}
+        <meta name="DC.title" lang="es-MX" content={frontMatter.title} />
+        <meta name="DC.creator" lang="es-MX" content={frontMatter.author} />
+        <meta name="DC.subject" lang="es-MX" content={frontMatter.subtitle} />
+        <meta
+          name="DC.description"
+          lang="es-MX"
+          content={frontMatter.description}
         />
+        <meta name="DC.publisher" lang="es-MX" content={frontMatter.author} />
+        <meta name="DC.date" lang="es-MX" content={frontMatter.date} />
+        <meta name="DC.type" lang="es-MX" content={frontMatter.category} />
+        <meta name="DC.identifier" lang="es-MX" content={frontMatter.title} />
+        <meta name="DC.source" lang="es-MX" content={frontMatter.web} />
+        <meta name="DC.relation" lang="es-MX" content={frontMatter.web} />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content={frontMatter.title} />
+        <meta name="twitter:description" content={frontMatter.description} />
+        <meta name="twitter:image:src" content={frontMatter.image} />
+        <meta name="twitter:image:alt" content={frontMatter.title} />
+
+        {/* Facebook */}
+        <meta property="og:title" content={frontMatter.title} />
+        <meta property="og:type" content={frontMatter.category} />
+        <meta
+          property="og:url"
+          content={`${frontMatter.canonical_url}`}
+        />
+        <meta property="og:image" content={frontMatter.image} />
+        <meta property="og:description" content={frontMatter.description} />
+
+        {/* Google + / Pinterest */}
+        <meta itemProp="description" content={frontMatter.description} />
+        <meta itemProp="image" content={frontMatter.image} />
+
+        {/* Robots */}
+        <meta name="robots" content="index,follow" />
       </Head>
 
       <main>
