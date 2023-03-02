@@ -43,6 +43,8 @@ class MyDocument extends Document {
           <meta name="generator" content="nextjs 13" />
 
           {/* Cache */}
+          <meta http-equiv="Cache-Control" content="max-age=31536000, public" />
+          <meta http-equiv="Expires" content="Mon, 02 Mar 2024 00:00:00 GMT" />
           {/* <meta content="no-cache" name="Pragma" />
           <meta httpEquiv="pragma" content="no-cache" />
           <meta httpEquiv="cache-control" content="no-cache" /> */}
