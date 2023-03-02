@@ -43,9 +43,9 @@ class MyDocument extends Document {
           <meta name="generator" content="nextjs 13" />
 
           {/* Cache */}
-          <meta content="no-cache" name="Pragma" />
+          {/* <meta content="no-cache" name="Pragma" />
           <meta httpEquiv="pragma" content="no-cache" />
-          <meta httpEquiv="cache-control" content="no-cache" />
+          <meta httpEquiv="cache-control" content="no-cache" /> */}
 
           {/* Dublincore */}
           <meta name="DC.contributor" lang="es-MX" content="imSoft" />
