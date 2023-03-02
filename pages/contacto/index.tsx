@@ -306,7 +306,7 @@ const Contacto = () => {
                   <div>
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-primary-500 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-primary-500 py-3 px-6 text-base font-medium text-white shadow-sm hover:bg-primary-900 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                       onClick={onSend}
                     >
                       Enviar
