@@ -9,7 +9,7 @@ type Props = {
 export const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <header>
+      <header className="sticky top-0 z-50">
         <ConversionBar />
         <Header />
       </header>
