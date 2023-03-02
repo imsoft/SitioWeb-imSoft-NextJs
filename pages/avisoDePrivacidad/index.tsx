@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import { IMetatags } from "../../interfaces";
+import { dateMetatagInfo } from "../../data";
 
 const avisoDePrivacidad = () => {
   const metatagsInfo: IMetatags = {
@@ -11,7 +12,7 @@ const avisoDePrivacidad = () => {
     keywords: "Aviso de privacidad, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "Aviso de privacidad",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Articulo",
     source: "https://www.imsoft.io/avisoDePrivacidad",
     image:
@@ -29,6 +30,7 @@ const avisoDePrivacidad = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

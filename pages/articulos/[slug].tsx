@@ -37,6 +37,7 @@ const Post = ({ source, frontMatter, posts }: Props) => {
         <meta httpEquiv="title" content={`${frontMatter.title} | imSoft`} />
         <meta name="description" lang="es" content={frontMatter.description} />
         <meta name="keywords" lang="es" content={frontMatter.keywords} />
+        <meta name="date" content={frontMatter.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={frontMatter.author} />

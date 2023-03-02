@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import { IMetatags } from "../../interfaces";
+import { dateMetatagInfo } from "../../data";
 
 const nosotros = () => {
   const metatagsInfo: IMetatags = {
@@ -12,7 +13,7 @@ const nosotros = () => {
     keywords: "Nosotros, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "Nosotros",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Nosotros",
     source: "https://www.imsoft.io/nosotros",
     image:
@@ -30,6 +31,7 @@ const nosotros = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

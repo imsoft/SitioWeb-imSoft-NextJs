@@ -7,6 +7,7 @@ import PostCard from "../../components/articles/PostCard";
 import { getAllFilesMetadata } from "../../lib/mdx";
 
 import { IMetatags, IPost } from "../../interfaces";
+import { dateMetatagInfo } from "../../data";
 
 interface Props {
   posts: IPost[];
@@ -20,7 +21,7 @@ export const index: NextPage<Props> = (props) => {
     keywords: "imSoft, articulos, blogs, noticias",
     author: "Brandon Uriel García Ramos",
     subject: "Artículos",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Artículos",
     source: "https://www.imsoft.io/articulos",
     image:
@@ -38,6 +39,7 @@ export const index: NextPage<Props> = (props) => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

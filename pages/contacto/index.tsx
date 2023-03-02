@@ -10,6 +10,7 @@ import ContactInfo from "../../components/ui/shared/ContactInfo";
 import { IMetatags } from "../../interfaces";
 
 import { ExclamationCircleIcon } from "@heroicons/react/24/outline";
+import { dateMetatagInfo } from "../../data";
 
 const Contacto = () => {
   const metatagsInfo: IMetatags = {
@@ -19,7 +20,7 @@ const Contacto = () => {
     keywords: "Información de contacto, Contacto, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "Formulario de contacto",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Contacto",
     source: "https://www.imsoft.io/contacto",
     image:
@@ -101,6 +102,7 @@ const Contacto = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

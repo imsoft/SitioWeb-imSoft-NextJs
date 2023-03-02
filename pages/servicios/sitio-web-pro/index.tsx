@@ -24,6 +24,7 @@ import {
   PencilIcon,
   ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
+import { dateMetatagInfo } from "../../../data";
 
 const index = () => {
   const introductorySectionInfo: IIntroductorySection = {
@@ -163,7 +164,7 @@ const index = () => {
     keywords: "Pagina Web Pro, Sitio Web Pro, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "Sitio Web Pro",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Sitio Web Pro",
     source: "https://www.imsoft.io/sitio-web-pro",
     image:
@@ -181,6 +182,7 @@ const index = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

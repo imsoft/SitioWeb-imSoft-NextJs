@@ -4,6 +4,7 @@ import Head from "next/head";
 import MessageComponent from "../components/ui/shared/MessageComponent";
 
 import { IMetatags, INotificationMessage } from "../interfaces";
+import { dateMetatagInfo } from "../data";
 
 
 const ErrorPage = () => {
@@ -19,7 +20,7 @@ const ErrorPage = () => {
     keywords: "404, Esta página no existe, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "404",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "404",
     source: "https://www.imsoft.io/404",
     image:
@@ -37,6 +38,7 @@ const ErrorPage = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

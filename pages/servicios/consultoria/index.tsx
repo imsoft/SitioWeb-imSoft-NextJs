@@ -24,6 +24,7 @@ import {
   ClipboardDocumentCheckIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
+import { dateMetatagInfo } from "../../../data";
 
 const index = () => {
   const introductorySectionInfo: IIntroductorySection = {
@@ -114,7 +115,7 @@ const index = () => {
     keywords: "Consultoría de sitio web, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "Consultoría de sitio web",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Consultoría de sitio web",
     source: "https://www.imsoft.io/consultoria",
     image:
@@ -132,6 +133,7 @@ const index = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

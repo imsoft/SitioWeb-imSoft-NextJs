@@ -4,6 +4,7 @@ import Head from "next/head";
 import { PortfolioCard } from "../../components/ui/portfolio";
 
 import { IMetatags, IPortfolioCard } from "../../interfaces";
+import { dateMetatagInfo } from "../../data";
 
 const portafolio = () => {
   const portfolioInfo: IPortfolioCard[] = [
@@ -104,7 +105,7 @@ const portafolio = () => {
     keywords: "Portafolio, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "Portafolio",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Portafolio",
     source: "https://www.imsoft.io/portafolio",
     image:
@@ -122,6 +123,7 @@ const portafolio = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

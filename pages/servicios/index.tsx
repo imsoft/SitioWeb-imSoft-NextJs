@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { IMetatags, IServiceCard } from "../../interfaces";
+import { dateMetatagInfo } from "../../data";
 
 const index = () => {
   const serviceCardInfo: IServiceCard[] = [
@@ -62,7 +63,7 @@ const index = () => {
       "Servicios, imSoft, Sitio Web, Sitios web, Pagina Web, Paginas Web, ecommerce, tienda en linea, Posicionamiento SEO",
     author: "Brandon Uriel García Ramos",
     subject: "Servicios",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Servicios",
     source: "https://www.imsoft.io/servicios",
     image:
@@ -80,6 +81,7 @@ const index = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

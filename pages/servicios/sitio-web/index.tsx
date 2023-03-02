@@ -24,6 +24,7 @@ import {
   ArrowTrendingUpIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
+import { dateMetatagInfo } from "../../../data";
 
 const index = () => {
   const introductorySectionInfo: IIntroductorySection = {
@@ -166,7 +167,7 @@ const index = () => {
     keywords: "Sitio Web, imSoft",
     author: "Brandon Uriel García Ramos",
     subject: "Sitio Web",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Sitio Web",
     source: "https://www.imsoft.io/sitio-web",
     image:
@@ -184,6 +185,7 @@ const index = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />

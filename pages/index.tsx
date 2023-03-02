@@ -10,6 +10,7 @@ import {
   FifthSection,
   SixthSection,
 } from "../components/ui/IndexPage";
+import { dateMetatagInfo } from "../data";
 
 const index = () => {
   const metatagsInfo: IMetatags = {
@@ -20,7 +21,7 @@ const index = () => {
       "imSoft, pagina web, paginas web, sitio web, sitios web, tienda en linea, tienda electronica, ecommerce, seo, consultoria",
     author: "Brandon Uriel García Ramos",
     subject: "Inicio",
-    date: "01/01/2023",
+    date: dateMetatagInfo,
     type: "Inicio",
     source: "https://www.imsoft.io/",
     image:
@@ -38,6 +39,7 @@ const index = () => {
         <meta httpEquiv="title" content={metatagsInfo.title} />
         <meta name="description" lang="es" content={metatagsInfo.description} />
         <meta name="keywords" lang="es" content={metatagsInfo.keywords} />
+        <meta name="date" content={metatagsInfo.date} />
 
         {/* Informacion del autor */}
         <meta name="author" content={metatagsInfo.author} />
