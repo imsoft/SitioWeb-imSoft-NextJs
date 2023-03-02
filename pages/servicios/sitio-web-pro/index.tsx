@@ -87,7 +87,7 @@ const index = () => {
         title: "Paquete de Sitio Web Pro #1",
         description: "Te acompañamos en el crecimiento de tu negocio en línea.",
         featuresOfPackage: [
-          "Hasta 4 secciones",
+          "Hasta cuatro secciones",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
@@ -107,7 +107,7 @@ const index = () => {
         description:
           "Soluciones web personalizadas y a medida para tu negocio.",
         featuresOfPackage: [
-          "Hasta 6 secciones",
+          "Hasta seis secciones",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
@@ -127,7 +127,7 @@ const index = () => {
         title: "Paquete de Sitio Web Pro #3",
         description: "Sitios web de alta calidad y diseño atractivo.",
         featuresOfPackage: [
-          "Hasta 8 secciones",
+          "Hasta ocho secciones",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
@@ -136,7 +136,6 @@ const index = () => {
           "Seis Correos electrónicos",
           "Certificado de seguridad",
           "Un solo idioma",
-          "Escaneo de amenazas “SG Site Scanner”",
           "Dominio",
           "Hosting",
           "SEO básico",

@@ -87,6 +87,7 @@ const index = () => {
           "Con un e-commerce escalable, tu tienda en línea está preparada para el futuro.",
         featuresOfPackage: [
           "Hasta cuatro secciones",
+          "Hasta tres productos",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
@@ -107,6 +108,7 @@ const index = () => {
           "Nuestro equipo de desarrolladores de ecommerce te llevará al éxito.",
         featuresOfPackage: [
           "Hasta seis secciones",
+          "Hasta cinco productos",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
@@ -128,6 +130,7 @@ const index = () => {
           "Hacemos que tus compras en línea sean fáciles y seguras para tus clientes.",
         featuresOfPackage: [
           "Hasta ocho secciones",
+          "Hasta siete productos",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",

@@ -88,7 +88,7 @@ const index = () => {
         description:
           "Diseñamos y desarrollamos sitios web personalizados a tu medida.",
         featuresOfPackage: [
-          "Hasta 4 secciones",
+          "Hasta cuatro secciones",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
@@ -108,7 +108,7 @@ const index = () => {
         description:
           "Brindamos soluciones de desarrollo web profesionales y eficientes.",
         featuresOfPackage: [
-          "Hasta 6 secciones",
+          "Hasta seis secciones",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
@@ -129,7 +129,7 @@ const index = () => {
         description:
           "Nuestros sitios web son atractivos, responsivos y fáciles de usar.",
         featuresOfPackage: [
-          "Hasta 8 secciones",
+          "Hasta ocho secciones",
           "Adaptación de dispositivos móviles",
           "Formulario de contacto",
           "Mapa de ubicación",
