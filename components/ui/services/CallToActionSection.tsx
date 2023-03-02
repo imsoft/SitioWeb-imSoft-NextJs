@@ -32,14 +32,14 @@ export const CallToActionSection = ({
             </p>
             <p className="mt-3 text-lg text-gray-100">{description}</p>
             <div className="mt-8">
-              <div className="inline-flex rounded-md shadow">
+              <div className="group inline-flex rounded-md shadow">
                 <Link
                   href="/contacto"
-                  className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
+                  className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-500 hover:bg-primary-900 group-hover:text-white"
                 >
                   Contactanos
                   <ArrowTopRightOnSquareIcon
-                    className="-mr-1 ml-3 h-5 w-5 text-gray-400"
+                    className="-mr-1 ml-3 h-5 w-5 text-gray-400 group-hover:text-white"
                     aria-hidden="true"
                   />
                 </Link>

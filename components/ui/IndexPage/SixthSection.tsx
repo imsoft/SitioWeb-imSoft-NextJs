@@ -20,7 +20,7 @@ export const SixthSection = () => {
           <Link
             href={`${whatsappBusinessLink}`}
             target="_blank"
-            className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-primary-500 sm:w-auto"
+            className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-primary-500 sm:w-auto hover:bg-primary-900 hover:text-white"
           >
             Contactanos
           </Link>
