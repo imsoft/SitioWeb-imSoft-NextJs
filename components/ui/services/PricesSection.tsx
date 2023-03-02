@@ -80,7 +80,7 @@ export const PricesSection = ({
                   </div>
                   <p className="mt-4 text-sm">
                     <Link
-                      href="#"
+                      href="/terminosYCondiciones"
                       className="font-medium text-gray-500 underline"
                     >
                       Términos y condiciones
