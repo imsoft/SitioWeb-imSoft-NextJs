@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 
 import MessageComponent from "../../components/ui/shared/MessageComponent";
 
 import { IMetatags, INotificationMessage } from "../../interfaces";
 import { dateMetatagInfo } from "../../data";
+import { showConfetti } from "../../utils";
 
 const MensajeDeConfirmacion = () => {
   const notificationMessageInfo: INotificationMessage = {
@@ -27,6 +28,10 @@ const MensajeDeConfirmacion = () => {
     url: "https://www.imsoft.io/mensajes/mensajeDeConfirmacion",
     robots: "index,follow",
   };
+
+  useEffect(() => {
+    showConfetti();
+  }, []);
 
   return (
     <>
