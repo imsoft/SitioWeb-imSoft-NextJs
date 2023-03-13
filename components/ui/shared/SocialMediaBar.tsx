@@ -141,7 +141,12 @@ const SocialMediaBar = ({ iconStyle }: Props) => {
     <>
       <div className="flex space-x-6 mt-8">
         {socialMedia.map((item) => (
-          <Link key={item.name} href={item.href} className={`${iconStyle}`}>
+          <Link
+            key={item.name}
+            href={item.href}
+            className={`${iconStyle}`}
+            target="_blank"
+          >
             <span className="sr-only">{item.name}</span>
             <item.icon aria-hidden="true" />
           </Link>
