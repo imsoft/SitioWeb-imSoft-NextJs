@@ -127,8 +127,8 @@ const nosotros = () => {
                   nuestro trabajo y nuestro compromiso con la satisfacción del
                   cliente. Muchos de ellos se convirtieron en leales seguidores
                   de
-                  <span className="text-primary-500">imSoft</span>, y la empresa
-                  comenzó a crecer rápidamente.
+                  <span className="text-primary-500"> imSoft</span>, y la
+                  empresa comenzó a crecer rápidamente.
                 </p>
                 <p className="mt-8 text-lg text-gray-500">
                   Hoy en día, <span className="text-primary-500">imSoft</span>{" "}
@@ -138,7 +138,7 @@ const nosotros = () => {
                   a tener éxito a través de soluciones de software
                   personalizadas y de alta calidad. ¡Si estás buscando una
                   empresa de desarrollo de software confiable y motivada,
-                  <span className="text-primary-500">imSoft</span> es la opción
+                  <span className="text-primary-500"> imSoft</span> es la opción
                   perfecta para ti!
                 </p>
               </div>
